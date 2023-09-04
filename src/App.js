@@ -1,11 +1,13 @@
 import "./App.css";
+import Payroll from "./Payroll";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Hello from header</p>
+        <h1>Employer Payroll Tax Calculator</h1>
       </header>
+      <Payroll />
     </div>
   );
 }
