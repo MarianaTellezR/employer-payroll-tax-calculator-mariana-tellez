@@ -33,15 +33,11 @@ export default function Payroll() {
         <div className="col-sm-12 col-md-6 payroll-left">
           <h1>Stress-free payrool is just one click away!</h1>
           <p>
-            Simplify Payroll Taxes with Confidence Running a business can be
-            complex, especially as a first-time small business employer. Ensure
-            accuracy and ease in your payroll operations with our free Employer
-            Payroll Tax Calculator. <br/> <br/>Say goodbye to manual calculations and the
-            hassle of tax withholdings. Our tool provides precise estimates for
-            deductions, streamlining the process for efficient payroll tax
-            management. Let us simplify your payroll tasks, allowing you to
-            focus on growing your business with confidence. Try our Employer
-            Payroll Tax Calculator today.
+            Simplify Payroll Taxes with Confidence! Our free Employer Payroll
+            Tax Calculator eliminates the complexities of business taxes. Say
+            goodbye to manual calculations and tax headaches. Get accurate
+            deductions instantly, streamlining your payroll tax management.
+            Focus on business growth with confidence. Try it today!
           </p>
           <form onSubmit={handleSubmit} className="form-input">
             <label forhtml="states">State:</label>
@@ -62,22 +58,28 @@ export default function Payroll() {
               <option value="columbia">District of Columbia</option>
             </select>
             <label forhtml="wage">Annual Wage:</label>
-            <input
-              value={annualWage}
-              type="text"
-              onChange={handleChangeAnnualWage}
-              name="wage"
-              id="wage"
-            ></input>
+            <div className="d-flex">
+              <i className="fa-solid fa-dollar-sign"></i>
+              <input
+                value={annualWage}
+                type="text"
+                onChange={handleChangeAnnualWage}
+                name="wage"
+                id="wage"
+              ></input>
+            </div>
             <label forhtml="sui">SUI Rate:</label>
-            <input
-              value={suiRate}
-              type="number"
-              onChange={handleChangeSuiRate}
-              name="sui"
-              id="sui"
-            ></input>
-            <input type="submit" value="Calculate" className="btn-calculate"/>
+            <div className="d-flex">
+              <input
+                value={suiRate}
+                type="number"
+                onChange={handleChangeSuiRate}
+                name="sui"
+                id="sui"
+              ></input>
+              <i className="fa-solid fa-percent"></i>
+            </div>
+            <input type="submit" value="Calculate" className="btn-calculate" />
           </form>
         </div>
         <div className="col-sm-12 col-md-6 payroll-right">
