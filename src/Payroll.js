@@ -28,46 +28,64 @@ export default function Payroll() {
 
   return (
     <div className="Payroll">
-      <form onSubmit={handleSubmit}>
-        <label for="states">State:</label>
-        <select
-          value={state}
-          onChange={handleChangeState}
-          name="states"
-          id="states"
-        >
-          <option value="alabama">Alabama</option>
-          <option value="alaska">Alaska</option>
-          <option value="arizona">Arizona</option>
-          <option value="arkansas">Arkansas</option>
-          <option value="california">California</option>
-          <option value="colorado">Colorado</option>
-          <option value="connecticut">Connecticut</option>
-          <option value="delaware">Delaware</option>
-          <option value="columbia">District of Columbia</option>
-        </select>
-        <label for="wage">Annual Wage:</label>
-        <input
-          value={annualWage}
-          type="text"
-          onChange={handleChangeAnnualWage}
-          name="wage"
-          id="wage"
-        ></input>
-        <label for="sui">SUI Rate:</label>
-        <input
-          value={suiRate}
-          type="number"
-          onChange={handleChangeSuiRate}
-          name="sui"
-          id="sui"
-        ></input>
-        <input type="submit" value="Calculate" />
-      </form>
-      <p>State: {state}</p>
-      <p>Annual Wage: ${annualWage}</p>
-      <p>SUI Rate: {suiRate} %</p>
-      <h2>{message}</h2>
+      <div className="row">
+        <div className="col-sm-12 col-md-6 payroll-left">
+          <h1>Stress-free payrool is just one click away!</h1>
+          <p>
+            Simplify Payroll Taxes with Confidence Running a business can be
+            complex, especially as a first-time small business employer. Ensure
+            accuracy and ease in your payroll operations with our free Employer
+            Payroll Tax Calculator. Say goodbye to manual calculations and the
+            hassle of tax withholdings. Our tool provides precise estimates for
+            deductions, streamlining the process for efficient payroll tax
+            management. Let us simplify your payroll tasks, allowing you to
+            focus on growing your business with confidence. Try our Employer
+            Payroll Tax Calculator today.
+          </p>
+          <form onSubmit={handleSubmit}>
+            <label for="states">State:</label>
+            <select
+              value={state}
+              onChange={handleChangeState}
+              name="states"
+              id="states"
+            >
+              <option value="alabama">Alabama</option>
+              <option value="alaska">Alaska</option>
+              <option value="arizona">Arizona</option>
+              <option value="arkansas">Arkansas</option>
+              <option value="california">California</option>
+              <option value="colorado">Colorado</option>
+              <option value="connecticut">Connecticut</option>
+              <option value="delaware">Delaware</option>
+              <option value="columbia">District of Columbia</option>
+            </select>
+            <label for="wage">Annual Wage:</label>
+            <input
+              value={annualWage}
+              type="text"
+              onChange={handleChangeAnnualWage}
+              name="wage"
+              id="wage"
+            ></input>
+            <label for="sui">SUI Rate:</label>
+            <input
+              value={suiRate}
+              type="number"
+              onChange={handleChangeSuiRate}
+              name="sui"
+              id="sui"
+            ></input>
+            <input type="submit" value="Calculate" />
+          </form>
+        </div>
+        <div className="col-sm-12 col-md-6 payroll-right">
+          <p>State: {state}</p>
+          <p>Annual Wage: ${annualWage}</p>
+          <p>SUI Rate: {suiRate} %</p>
+          <h2>{message}</h2>
+        </div>
+      </div>
     </div>
   );
 }
