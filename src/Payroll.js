@@ -36,14 +36,14 @@ export default function Payroll() {
             Simplify Payroll Taxes with Confidence Running a business can be
             complex, especially as a first-time small business employer. Ensure
             accuracy and ease in your payroll operations with our free Employer
-            Payroll Tax Calculator. <br/>Say goodbye to manual calculations and the
+            Payroll Tax Calculator. <br/> <br/>Say goodbye to manual calculations and the
             hassle of tax withholdings. Our tool provides precise estimates for
             deductions, streamlining the process for efficient payroll tax
             management. Let us simplify your payroll tasks, allowing you to
             focus on growing your business with confidence. Try our Employer
             Payroll Tax Calculator today.
           </p>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="form-input">
             <label forhtml="states">State:</label>
             <select
               value={state}
@@ -77,7 +77,7 @@ export default function Payroll() {
               name="sui"
               id="sui"
             ></input>
-            <input type="submit" value="Calculate" />
+            <input type="submit" value="Calculate" className="btn-calculate"/>
           </form>
         </div>
         <div className="col-sm-12 col-md-6 payroll-right">
