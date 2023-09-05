@@ -44,7 +44,7 @@
   margin: 10px;
   padding: 12px;
   border-radius: 12px;
-  border: 1px solid #5585b5;
+  border: 1px solid #409fbe;
 }
 
 .Payroll .payroll-left input {
@@ -52,7 +52,7 @@
   padding: 12px;
   width: 90%;
   border-radius: 12px;
-  border: 1px solid #5585b5;
+  border: 1px solid #409fbe;
 }
 
 .Payroll .payroll-left .btn-calculate {
@@ -62,8 +62,8 @@
   padding: 15px 5px;
   background: radial-gradient(
     circle at 10% 20%,
-    #5585b5 0%,
-    rgb(90, 136, 194) 100.2%
+    rgb(39, 199, 171) 0%,
+    rgb(70, 143, 197) 90%
   );
   color: white;
   border: 1px solid white;
@@ -73,7 +73,7 @@
 
 .Payroll .payroll-left i {
   color: white;
-  background-color:#5585b5 ;
+  background-color: #3aacb8;
   margin: 10px;
   padding: 12px 15px;
   padding-top: 15px;
@@ -82,11 +82,12 @@
 }
 
 .Payroll .payroll-left .btn-calculate:hover {
-  background: linear-gradient(
-    135deg,
-    rgb(108, 162, 212) 10%,
-    rgb(85, 117, 204) 100%
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(166, 226, 229) 0%,
+    rgb(198, 232, 221) 100.2%
   );
+  color: #2c88a7;
 }
 
 .Payroll .payroll-right {
@@ -98,7 +99,7 @@
   align-items: center;
   background: radial-gradient(
     circle at 10% 20%,
-    #5585b5 0%,
-    rgb(124, 182, 255) 100.2%
+    rgb(39, 199, 171) 0%,
+    rgb(70, 143, 197) 90%
   );
 }

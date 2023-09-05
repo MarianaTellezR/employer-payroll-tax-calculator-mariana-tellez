@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   padding: 20px 0;
-  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  background: radial-gradient(circle at 10% 20%, rgb(191, 226, 228) 0%, rgb(213, 230, 224) 100.2%);
 }
 
 .App h1 {
