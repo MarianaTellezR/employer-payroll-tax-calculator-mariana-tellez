@@ -8,6 +8,9 @@ function App() {
         <h1>Employer Payroll Tax Calculator</h1>
       </header>
       <Payroll />
+      <footer>
+        <p>Coded by Mariana Tellez Resendiz</p>
+      </footer>
     </div>
   );
 }

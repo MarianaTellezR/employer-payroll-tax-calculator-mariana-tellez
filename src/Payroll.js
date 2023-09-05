@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Payroll.css";
 
 export default function Payroll() {
   const [state, setState] = useState("alaska");
@@ -35,7 +36,7 @@ export default function Payroll() {
             Simplify Payroll Taxes with Confidence Running a business can be
             complex, especially as a first-time small business employer. Ensure
             accuracy and ease in your payroll operations with our free Employer
-            Payroll Tax Calculator. Say goodbye to manual calculations and the
+            Payroll Tax Calculator. <br/>Say goodbye to manual calculations and the
             hassle of tax withholdings. Our tool provides precise estimates for
             deductions, streamlining the process for efficient payroll tax
             management. Let us simplify your payroll tasks, allowing you to
@@ -43,7 +44,7 @@ export default function Payroll() {
             Payroll Tax Calculator today.
           </p>
           <form onSubmit={handleSubmit}>
-            <label for="states">State:</label>
+            <label forhtml="states">State:</label>
             <select
               value={state}
               onChange={handleChangeState}
@@ -60,7 +61,7 @@ export default function Payroll() {
               <option value="delaware">Delaware</option>
               <option value="columbia">District of Columbia</option>
             </select>
-            <label for="wage">Annual Wage:</label>
+            <label forhtml="wage">Annual Wage:</label>
             <input
               value={annualWage}
               type="text"
@@ -68,7 +69,7 @@ export default function Payroll() {
               name="wage"
               id="wage"
             ></input>
-            <label for="sui">SUI Rate:</label>
+            <label forhtml="sui">SUI Rate:</label>
             <input
               value={suiRate}
               type="number"
