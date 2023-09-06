@@ -6,10 +6,16 @@ export default function Results(props) {
   let wage = parseInt(props.wage);
   let sui = parseInt(props.sui);
 
+  //Social Security Tax
   let wage_ss_tax = wage;
   let ss_tax = 0;
 
+  //Medicare Tax
   let m_tax = 0;
+
+  //FUTA
+  let wage_futa = wage;
+  let futa = 0;
 
   function SocialSecurityTax(wage) {
     if (wage > 118500) {
@@ -28,16 +34,28 @@ export default function Results(props) {
     return m_tax;
   }
 
+  function FutaTax(wage, top, futa_percentage) {
+    if (wage > top) {
+      wage_futa = top;
+      futa = wage_futa * futa_percentage;
+      return futa;
+    } else {
+      wage_futa = wage;
+      futa = wage_futa * futa_percentage;
+      return futa;
+    }
+  }
+
   if (state === "alabama") {
-    // Social Security Tax
     SocialSecurityTax(wage);
     MedicareTax(wage);
+    FutaTax(wage, 7000, 0.006);
     return (
       <div className="Results">
         <ul>
           <li>Social Security Tax: {ss_tax}</li>
           <li>Medicare Tax: {m_tax}</li>
-          <li>FUTA:</li>
+          <li>FUTA: {futa}</li>
           <li>AL Unemployment Tax: </li>
           <li>Employment Security Enhancement Assessment (ESA): </li>
         </ul>
