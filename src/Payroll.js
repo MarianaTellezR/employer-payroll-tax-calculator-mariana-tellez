@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Payroll.css";
+import Results from "./Results";
 
 export default function Payroll() {
   const [state, setState] = useState("alaska");
@@ -31,7 +32,7 @@ export default function Payroll() {
     <div className="Payroll">
       <div className="row">
         <div className="col-sm-12 col-md-6 payroll-left">
-          <h1>Stress-free payrool is just one click away!</h1>
+          <h1>Stress-free payroll is just one click away!</h1>
           <p>
             Simplify Payroll Taxes with Confidence! Our free Employer Payroll
             Tax Calculator eliminates the complexities of business taxes. Say
@@ -83,10 +84,8 @@ export default function Payroll() {
           </form>
         </div>
         <div className="col-sm-12 col-md-6 payroll-right">
-          <p>State: {state}</p>
-          <p>Annual Wage: ${annualWage}</p>
-          <p>SUI Rate: {suiRate} %</p>
           <h2>{message}</h2>
+          <Results state={state} wage={annualWage} sui={suiRate} />
         </div>
       </div>
     </div>
