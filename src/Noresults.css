@@ -1,0 +1,14 @@
+.Noresults img {
+    width: 80%;
+}
+
+.Noresults h3 {
+    margin: 15px 20px;
+    padding: 10px;
+    color: white;
+}
+
+.Noresults p {
+    color: white;
+    margin: 14px 25px;
+}
