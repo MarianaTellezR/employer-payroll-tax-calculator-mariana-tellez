@@ -28,6 +28,10 @@
   align-items: center;
 }
 
+.Payroll .payroll-right h3 {
+  color: white;
+}
+
 .Payroll .payroll-left .form-input {
   display: flex;
   flex-direction: column;
