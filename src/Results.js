@@ -90,15 +90,47 @@ export default function Results(props) {
 
     return (
       <div className="Results">
-        <ul>
-          <li>Social Security Tax: {ss_tax.toFixed(2)}</li>
-          <li>Medicare Tax: {m_tax.toFixed(2)}</li>
-          <li>FUTA: {futa.toFixed(2)}</li>
-          <li>AL Unemployment Tax: {unem_tax.toFixed(2)} </li>
-          <li>
-            Employment Security Enhancement Assessment (ESA): {esa.toFixed(2)}
-          </li>
-        </ul>
+        <div className="row">
+          <div className="col-8">
+            <p>Social Security Tax: </p>
+          </div>
+          <div className="col-4">
+            <p>{ss_tax.toFixed(2)}</p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-8">
+            <p>Medicare Tax: </p>
+          </div>
+          <div className="col-4">
+            <p>{m_tax.toFixed(2)}</p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-8">
+            <p>FUTA: </p>
+          </div>
+          <div className="col-4">
+            <p>{futa.toFixed(2)}</p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-8">
+            <p>AL Unemployment Tax: </p>
+          </div>
+          <div className="col-4">
+            <p>{unem_tax.toFixed(2)}</p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-8">
+            <p>Employment Security Enhancement Assessment (ESA): </p>
+          </div>
+          <div className="col-4">
+            <p>{esa.toFixed(2)}</p>
+          </div>
+        </div>
+        
         <hr />
         <p>Total Annual Cost To Hire This Employee: {total} </p>
       </div>
