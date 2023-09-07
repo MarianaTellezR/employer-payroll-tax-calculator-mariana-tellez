@@ -17,6 +17,14 @@ export default function Results(props) {
   let wage_futa = wage;
   let futa = 0;
 
+  //Unemployment Tax
+  let wage_un_tax = wage;
+  let unem_tax = 0;
+
+  // ESA Employment Security Enhancement A.
+  let wage_esa = wage;
+  let esa = 0;
+
   function SocialSecurityTax(wage) {
     if (wage > 118500) {
       wage_ss_tax = 118500;
@@ -46,19 +54,53 @@ export default function Results(props) {
     }
   }
 
+  function UnemploymentTax(wage, top, sui) {
+    if (wage > top) {
+      wage_un_tax = top;
+      unem_tax = wage_un_tax * (sui / 100);
+      return unem_tax;
+    } else {
+      wage_un_tax = wage;
+      unem_tax = wage_un_tax * (sui / 100);
+      return unem_tax;
+    }
+  }
+
+  function EmploymentSecurityEnhancementESA(wage, top) {
+    if (wage > top) {
+      wage_esa = top;
+      esa = wage_esa * (0.06 / 100);
+      return esa;
+    } else {
+      wage_esa = wage;
+      esa = wage_esa * (0.06 / 100);
+      return esa;
+    }
+  }
+
   if (state === "alabama") {
     SocialSecurityTax(wage);
     MedicareTax(wage);
     FutaTax(wage, 7000, 0.006);
+    UnemploymentTax(wage, 8000, sui);
+    EmploymentSecurityEnhancementESA(wage, 8000);
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax + esa;
+    total = total.toFixed(2);
+
     return (
       <div className="Results">
         <ul>
-          <li>Social Security Tax: {ss_tax}</li>
-          <li>Medicare Tax: {m_tax}</li>
-          <li>FUTA: {futa}</li>
-          <li>AL Unemployment Tax: </li>
-          <li>Employment Security Enhancement Assessment (ESA): </li>
+          <li>Social Security Tax: {ss_tax.toFixed(2)}</li>
+          <li>Medicare Tax: {m_tax.toFixed(2)}</li>
+          <li>FUTA: {futa.toFixed(2)}</li>
+          <li>AL Unemployment Tax: {unem_tax.toFixed(2)} </li>
+          <li>
+            Employment Security Enhancement Assessment (ESA): {esa.toFixed(2)}
+          </li>
         </ul>
+        <hr />
+        <p>Total Annual Cost To Hire This Employee: {total} </p>
       </div>
     );
   } else {
