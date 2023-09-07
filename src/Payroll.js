@@ -17,14 +17,17 @@ export default function Payroll() {
 
   function handleChangeState(event) {
     setState(event.target.value);
+    setCalculate(false);
   }
 
   function handleChangeAnnualWage(event) {
     setAnnualWage(event.target.value);
+    setCalculate(false);
   }
 
   function handleChangeSuiRate(event) {
     setSuiRate(event.target.value);
+    setCalculate(false);
   }
 
   if (calculate) {
