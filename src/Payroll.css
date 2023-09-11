@@ -10,6 +10,8 @@
 
 .Payroll h1 {
   margin: 20px;
+  color: #5951b8;
+  text-shadow: none;
 }
 
 .Payroll p {
@@ -41,14 +43,14 @@
 .Payroll .payroll-left label {
   text-align: left;
   padding: 7px 0;
-  color: rgb(118, 123, 126);
+  color: #78798f;
 }
 
 .Payroll .payroll-left select {
   margin: 10px;
   padding: 12px;
   border-radius: 12px;
-  border: 1px solid #409fbe;
+  border: 1px solid #8684db;
 }
 
 .Payroll .payroll-left input {
@@ -56,7 +58,7 @@
   padding: 12px;
   width: 90%;
   border-radius: 12px;
-  border: 1px solid #409fbe;
+  border: 1px solid #8684db;
 }
 
 .Payroll .payroll-left .btn-calculate {
@@ -64,34 +66,27 @@
   display: block;
   margin: 20px auto;
   padding: 15px 5px;
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgb(39, 199, 171) 0%,
-    rgb(70, 143, 197) 90%
-  );
+  background: #9896f1;
   color: white;
   border: 1px solid white;
   border-radius: 28px;
   transition: all 200ms ease-in-out;
 }
 
+.Payroll .payroll-left .btn-calculate:hover {
+  background: rgba(110, 172, 255, 1);
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
 .Payroll .payroll-left i {
   color: white;
-  background-color: #3aacb8;
+  background-color: #9896f1;
   margin: 10px;
   padding: 12px 15px;
   padding-top: 15px;
   justify-content: center;
   border-radius: 15px;
-}
-
-.Payroll .payroll-left .btn-calculate:hover {
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgb(166, 226, 229) 0%,
-    rgb(198, 232, 221) 100.2%
-  );
-  color: #2c88a7;
 }
 
 .Payroll .payroll-right {
@@ -101,9 +96,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgb(39, 199, 171) 0%,
-    rgb(70, 143, 197) 90%
+  background: rgb(138, 135, 254);
+  background: linear-gradient(
+    95deg,
+    rgba(138, 135, 254, 1) 29%,
+    rgba(110, 172, 255, 1) 100%
   );
 }

@@ -9,7 +9,26 @@ function App() {
       </header>
       <Payroll />
       <footer>
-        <p>Coded by Mariana Tellez Resendiz</p>
+        <p>
+          Designed and coded by{" "}
+          <a
+            href="https://www.linkedin.com/in/mariana-tellez-resendiz/"
+            target="_blank"
+            rel="noreferrer"
+            title="LinkedIn"
+          >
+            Mariana Tellez Resendiz
+          </a>{" "}
+          and is{" "}
+          <a
+            href="https://github.com/MarianaTellezR/employer-payroll-tax-calculator-mariana-tellez"
+            target="_blank"
+            rel="noreferrer"
+            title="GitHub Repository"
+          >
+            open-sourced on GitHub
+          </a>
+        </p>
       </footer>
     </div>
   );
