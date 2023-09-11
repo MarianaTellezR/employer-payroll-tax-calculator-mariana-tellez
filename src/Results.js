@@ -31,7 +31,7 @@ export default function Results(props) {
     if (wage > 118500) {
       wage_ss_tax = 118500;
       ss_tax = wage_ss_tax * 0.062;
-      return ss_tax;
+      return ss_tax
     } else {
       wage_ss_tax = wage;
       ss_tax = wage_ss_tax * 0.062;

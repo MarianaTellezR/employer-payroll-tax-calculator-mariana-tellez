@@ -3,13 +3,15 @@
 }
 
 .Results p {
-  font-size: 20px;
+  font-size: 18px;
+  text-align: end;
 }
 
 .Results .tag-name {
   color: rgb(242, 242, 247);
   font-weight: 600;
   text-shadow: 4px 5px 24px rgba(31, 31, 78, 0.589);
+  text-align: left;
 }
 
 .Results hr {
