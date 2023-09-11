@@ -118,6 +118,34 @@ export default function Results(props) {
         <p>Total Annual Cost To Hire This Employee: {total} </p>
       </div>
     );
+  } else if (state === "alaska") {
+    SocialSecurityTax(wage);
+    MedicareTax(wage);
+    FutaTax(wage, 7000, 0.006);
+    UnemploymentTax(wage, 39700, sui);
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax;
+    total = total.toFixed(2);
+
+    return (
+      <div className="Results">
+        <SocialMedicareFUTA
+          social={ss_tax.toFixed(2)}
+          medicare={m_tax.toFixed(2)}
+          futaa={futa.toFixed(2)}
+        />
+        <div className="row">
+          <div className="col-8">
+            <p>AK State Unemployment Tax: </p>
+          </div>
+          <div className="col-4">
+            <p>{unem_tax.toFixed(2)}</p>
+          </div>
+        </div>
+        <hr />
+        <p>Total Annual Cost To Hire This Employee: {total} </p>
+      </div>
+    );
   } else {
     return (
       <div className="Results">
