@@ -2,11 +2,15 @@ import React from "react";
 import "./Results.css";
 import SocialMedicareFUTA from "./SocialMedicareFUTA";
 
-
 export default function Results(props) {
   let state = props.state;
   let wage = parseInt(props.wage);
   let sui = parseInt(props.sui);
+
+  let USDollar = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  });
 
   //Social Security Tax
   let wage_ss_tax = wage;
@@ -31,7 +35,7 @@ export default function Results(props) {
     if (wage > 118500) {
       wage_ss_tax = 118500;
       ss_tax = wage_ss_tax * 0.062;
-      return ss_tax
+      return ss_tax;
     } else {
       wage_ss_tax = wage;
       ss_tax = wage_ss_tax * 0.062;
@@ -93,9 +97,9 @@ export default function Results(props) {
     return (
       <div className="Results">
         <SocialMedicareFUTA
-          social={ss_tax.toFixed(2)}
-          medicare={m_tax.toFixed(2)}
-          futaa={futa.toFixed(2)}
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
         />
 
         <div className="row">
@@ -103,7 +107,7 @@ export default function Results(props) {
             <p className="tag-name">AL Unemployment Tax: </p>
           </div>
           <div className="col-4">
-            <p>$ {unem_tax.toFixed(2)}</p>
+            <p>{USDollar.format(unem_tax)}</p>
           </div>
         </div>
         <div className="row">
@@ -113,7 +117,7 @@ export default function Results(props) {
             </p>
           </div>
           <div className="col-4">
-            <p>$ {esa.toFixed(2)}</p>
+            <p>{USDollar.format(esa)}</p>
           </div>
         </div>
 
@@ -124,7 +128,7 @@ export default function Results(props) {
             <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
           </div>
           <div className="col-4">
-            <p>$ {total} </p>
+            <p>{USDollar.format(total)} </p>
           </div>
         </div>
       </div>
@@ -141,16 +145,16 @@ export default function Results(props) {
     return (
       <div className="Results">
         <SocialMedicareFUTA
-          social={ss_tax.toFixed(2)}
-          medicare={m_tax.toFixed(2)}
-          futaa={futa.toFixed(2)}
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
         />
         <div className="row">
           <div className="col-8">
             <p className="tag-name">AK State Unemployment Tax: </p>
           </div>
           <div className="col-4">
-            <p>$ {unem_tax.toFixed(2)}</p>
+            <p>{USDollar.format(unem_tax)}</p>
           </div>
         </div>
         <hr />
@@ -159,10 +163,9 @@ export default function Results(props) {
             <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
           </div>
           <div className="col-4">
-            <p>$ {total} </p>
+            <p>{USDollar.format(total)}</p>
           </div>
         </div>
-        
       </div>
     );
   } else {
