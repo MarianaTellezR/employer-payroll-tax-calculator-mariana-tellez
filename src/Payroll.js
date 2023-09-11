@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Payroll.css";
 import Results from "./Results";
 import Noresults from "./Noresults";
+import ResultsImage from "./ResultsImage";
 
 export default function Payroll() {
   const [state, setState] = useState("alaska");
@@ -92,6 +93,7 @@ export default function Payroll() {
           </div>
           <div className="col-sm-12 col-md-6 payroll-right">
             <h3>As an employer you are responsible for the following taxes:</h3>
+            <ResultsImage />
             <Results state={state} wage={annualWage} sui={suiRate} />
           </div>
         </div>

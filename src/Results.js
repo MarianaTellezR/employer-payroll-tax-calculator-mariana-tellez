@@ -2,6 +2,7 @@ import React from "react";
 import "./Results.css";
 import SocialMedicareFUTA from "./SocialMedicareFUTA";
 
+
 export default function Results(props) {
   let state = props.state;
   let wage = parseInt(props.wage);
@@ -99,23 +100,33 @@ export default function Results(props) {
 
         <div className="row">
           <div className="col-8">
-            <p>AL Unemployment Tax: </p>
+            <p className="tag-name">AL Unemployment Tax: </p>
           </div>
           <div className="col-4">
-            <p>{unem_tax.toFixed(2)}</p>
+            <p>$ {unem_tax.toFixed(2)}</p>
           </div>
         </div>
         <div className="row">
           <div className="col-8">
-            <p>Employment Security Enhancement Assessment (ESA): </p>
+            <p className="tag-name">
+              Employment Security Enhancement Assessment (ESA):{" "}
+            </p>
           </div>
           <div className="col-4">
-            <p>{esa.toFixed(2)}</p>
+            <p>$ {esa.toFixed(2)}</p>
           </div>
         </div>
 
         <hr />
-        <p>Total Annual Cost To Hire This Employee: {total} </p>
+
+        <div className="row total">
+          <div className="col-8">
+            <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
+          </div>
+          <div className="col-4">
+            <p>$ {total} </p>
+          </div>
+        </div>
       </div>
     );
   } else if (state === "alaska") {
@@ -136,14 +147,22 @@ export default function Results(props) {
         />
         <div className="row">
           <div className="col-8">
-            <p>AK State Unemployment Tax: </p>
+            <p className="tag-name">AK State Unemployment Tax: </p>
           </div>
           <div className="col-4">
-            <p>{unem_tax.toFixed(2)}</p>
+            <p>$ {unem_tax.toFixed(2)}</p>
           </div>
         </div>
         <hr />
-        <p>Total Annual Cost To Hire This Employee: {total} </p>
+        <div className="row total">
+          <div className="col-8">
+            <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
+          </div>
+          <div className="col-4">
+            <p>$ {total} </p>
+          </div>
+        </div>
+        
       </div>
     );
   } else {
