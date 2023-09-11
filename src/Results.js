@@ -1,5 +1,6 @@
 import React from "react";
 import "./Results.css";
+import SocialMedicareFUTA from "./SocialMedicareFUTA";
 
 export default function Results(props) {
   let state = props.state;
@@ -90,30 +91,12 @@ export default function Results(props) {
 
     return (
       <div className="Results">
-        <div className="row">
-          <div className="col-8">
-            <p>Social Security Tax: </p>
-          </div>
-          <div className="col-4">
-            <p>{ss_tax.toFixed(2)}</p>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-8">
-            <p>Medicare Tax: </p>
-          </div>
-          <div className="col-4">
-            <p>{m_tax.toFixed(2)}</p>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-8">
-            <p>FUTA: </p>
-          </div>
-          <div className="col-4">
-            <p>{futa.toFixed(2)}</p>
-          </div>
-        </div>
+        <SocialMedicareFUTA
+          social={ss_tax.toFixed(2)}
+          medicare={m_tax.toFixed(2)}
+          futaa={futa.toFixed(2)}
+        />
+
         <div className="row">
           <div className="col-8">
             <p>AL Unemployment Tax: </p>
@@ -130,7 +113,7 @@ export default function Results(props) {
             <p>{esa.toFixed(2)}</p>
           </div>
         </div>
-        
+
         <hr />
         <p>Total Annual Cost To Hire This Employee: {total} </p>
       </div>
