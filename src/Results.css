@@ -1,3 +1,7 @@
 .Results {
   color: white;
 }
+
+.Results p {
+  font-size: 20px;
+}
