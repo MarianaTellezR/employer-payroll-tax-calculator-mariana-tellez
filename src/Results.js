@@ -92,7 +92,6 @@ export default function Results(props) {
     EmploymentSecurityEnhancementESA(wage, 8000);
 
     let total = wage + ss_tax + m_tax + futa + unem_tax + esa;
-    total = total.toFixed(2);
 
     return (
       <div className="Results">
@@ -140,7 +139,6 @@ export default function Results(props) {
     UnemploymentTax(wage, 39700, sui);
 
     let total = wage + ss_tax + m_tax + futa + unem_tax;
-    total = total.toFixed(2);
 
     return (
       <div className="Results">
@@ -152,6 +150,74 @@ export default function Results(props) {
         <div className="row">
           <div className="col-7">
             <p className="tag-name">AK State Unemployment Tax: </p>
+          </div>
+          <div className="col-5">
+            <p>{USDollar.format(unem_tax)}</p>
+          </div>
+        </div>
+        <hr />
+        <div className="row total">
+          <div className="col-7">
+            <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
+          </div>
+          <div className="col-5">
+            <p>{USDollar.format(total)}</p>
+          </div>
+        </div>
+      </div>
+    );
+  } else if (state === "arizona") {
+    SocialSecurityTax(wage);
+    MedicareTax(wage);
+    FutaTax(wage, 7000, 0.006);
+    UnemploymentTax(wage, 7000, sui);
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax;
+
+    return (
+      <div className="Results">
+        <SocialMedicareFUTA
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
+        />
+        <div className="row">
+          <div className="col-7">
+            <p className="tag-name">AZ State Unemployment Tax: </p>
+          </div>
+          <div className="col-5">
+            <p>{USDollar.format(unem_tax)}</p>
+          </div>
+        </div>
+        <hr />
+        <div className="row total">
+          <div className="col-7">
+            <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
+          </div>
+          <div className="col-5">
+            <p>{USDollar.format(total)}</p>
+          </div>
+        </div>
+      </div>
+    );
+  } else if (state === "arkansas") {
+    SocialSecurityTax(wage);
+    MedicareTax(wage);
+    FutaTax(wage, 7000, 0.006);
+    UnemploymentTax(wage, 12000, sui);
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax;
+
+    return (
+      <div className="Results">
+        <SocialMedicareFUTA
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
+        />
+        <div className="row">
+          <div className="col-7">
+            <p className="tag-name">AR State Unemployment Tax: </p>
           </div>
           <div className="col-5">
             <p>{USDollar.format(unem_tax)}</p>
