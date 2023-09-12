@@ -35,9 +35,9 @@ export default function Results(props) {
   let wage_tt = wage;
   let t_tax = 0;
 
-  function SocialSecurityTax(wage) {
-    if (wage > 118500) {
-      wage_ss_tax = 118500;
+  function SocialSecurityTax(wage, top) {
+    if (wage > top) {
+      wage_ss_tax = top;
       ss_tax = wage_ss_tax * 0.062;
       return ss_tax;
     } else {
@@ -101,7 +101,7 @@ export default function Results(props) {
   }
 
   if (state === "alabama") {
-    SocialSecurityTax(wage);
+    SocialSecurityTax(wage, 118000);
     MedicareTax(wage);
     FutaTax(wage, 7000, 0.006);
     UnemploymentTax(wage, 8000, sui);
@@ -149,7 +149,7 @@ export default function Results(props) {
       </div>
     );
   } else if (state === "alaska") {
-    SocialSecurityTax(wage);
+    SocialSecurityTax(wage, 118000);
     MedicareTax(wage);
     FutaTax(wage, 7000, 0.006);
     UnemploymentTax(wage, 39700, sui);
@@ -183,7 +183,7 @@ export default function Results(props) {
       </div>
     );
   } else if (state === "arizona") {
-    SocialSecurityTax(wage);
+    SocialSecurityTax(wage, 118000);
     MedicareTax(wage);
     FutaTax(wage, 7000, 0.006);
     UnemploymentTax(wage, 7000, sui);
@@ -217,7 +217,7 @@ export default function Results(props) {
       </div>
     );
   } else if (state === "arkansas") {
-    SocialSecurityTax(wage);
+    SocialSecurityTax(wage, 118000);
     MedicareTax(wage);
     FutaTax(wage, 7000, 0.006);
     UnemploymentTax(wage, 12000, sui);
@@ -251,7 +251,7 @@ export default function Results(props) {
       </div>
     );
   } else if (state === "california") {
-    SocialSecurityTax(wage);
+    SocialSecurityTax(wage, 118000);
     MedicareTax(wage);
     FutaTax(wage, 7000, 0.021);
     UnemploymentTax(wage, 7000, sui);
@@ -294,7 +294,7 @@ export default function Results(props) {
       </div>
     );
   } else if (state === "colorado") {
-    SocialSecurityTax(wage);
+    SocialSecurityTax(wage, 118000);
     MedicareTax(wage);
     FutaTax(wage, 7000, 0.006);
     UnemploymentTax(wage, 12200, sui);
@@ -311,6 +311,40 @@ export default function Results(props) {
         <div className="row">
           <div className="col-7">
             <p className="tag-name">CO Unemployment Insurance Tax: </p>
+          </div>
+          <div className="col-5">
+            <p>{USDollar.format(unem_tax)}</p>
+          </div>
+        </div>
+        <hr />
+        <div className="row total">
+          <div className="col-7">
+            <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
+          </div>
+          <div className="col-5">
+            <p>{USDollar.format(total)}</p>
+          </div>
+        </div>
+      </div>
+    );
+  } else if (state === "connecticut") {
+    SocialSecurityTax(wage, 118000);
+    MedicareTax(wage);
+    FutaTax(wage, 7000, 0.027);
+    UnemploymentTax(wage, 15000, sui);
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax;
+
+    return (
+      <div className="Results">
+        <SocialMedicareFUTA
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
+        />
+        <div className="row">
+          <div className="col-7">
+            <p className="tag-name">CT State Unemployment Tax: </p>
           </div>
           <div className="col-5">
             <p>{USDollar.format(unem_tax)}</p>
