@@ -361,6 +361,92 @@ export default function Results(props) {
         </div>
       </div>
     );
+  } else if (state === "delaware") {
+    SocialSecurityTax(wage, 118000);
+    MedicareTax(wage);
+    FutaTax(wage, 7000, 0.006);
+    UnemploymentTax(wage, 18500, sui);
+    TrainingTax(wage, 18500, 0.085);
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax + t_tax;
+
+    return (
+      <div className="Results">
+        <SocialMedicareFUTA
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
+        />
+        <div className="row">
+          <div className="col-7">
+            <p className="tag-name">DE Unemployment Insurance Tax: </p>
+          </div>
+          <div className="col-5">
+            <p>{USDollar.format(unem_tax)}</p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-7">
+            <p className="tag-name">DE Training Tax: </p>
+          </div>
+          <div className="col-5">
+            <p>{USDollar.format(t_tax)}</p>
+          </div>
+        </div>
+        <hr />
+        <div className="row total">
+          <div className="col-7">
+            <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
+          </div>
+          <div className="col-5">
+            <p>{USDollar.format(total)}</p>
+          </div>
+        </div>
+      </div>
+    );
+  } else if (state === "columbia") {
+    SocialSecurityTax(wage, 118000);
+    MedicareTax(wage);
+    FutaTax(wage, 7000, 0.006);
+    UnemploymentTax(wage, 9000, sui);
+    TrainingTax(wage, 9000, 0.2);
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax + t_tax;
+
+    return (
+      <div className="Results">
+        <SocialMedicareFUTA
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
+        />
+        <div className="row">
+          <div className="col-7">
+            <p className="tag-name">DC Unemployment Compensation Tax:</p>
+          </div>
+          <div className="col-5">
+            <p>{USDollar.format(unem_tax)}</p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-7">
+            <p className="tag-name">DC Admin. Assessment:</p>
+          </div>
+          <div className="col-5">
+            <p>{USDollar.format(t_tax)}</p>
+          </div>
+        </div>
+        <hr />
+        <div className="row total">
+          <div className="col-7">
+            <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
+          </div>
+          <div className="col-5">
+            <p>{USDollar.format(total)}</p>
+          </div>
+        </div>
+      </div>
+    );
   } else {
     return (
       <div className="Results">
