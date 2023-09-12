@@ -31,6 +31,10 @@ export default function Results(props) {
   let wage_esa = wage;
   let esa = 0;
 
+  //Training Tax
+  let wage_tt = wage;
+  let t_tax = 0;
+
   function SocialSecurityTax(wage) {
     if (wage > 118500) {
       wage_ss_tax = 118500;
@@ -81,6 +85,18 @@ export default function Results(props) {
       wage_esa = wage;
       esa = wage_esa * (0.06 / 100);
       return esa;
+    }
+  }
+
+  function TrainingTax(wage, top, percentage) {
+    if (wage > top) {
+      wage_tt = top;
+      t_tax = wage_tt * (percentage / 100);
+      return t_tax;
+    } else {
+      wage_tt = wage;
+      t_tax = wage_tt * (percentage / 100);
+      return t_tax;
     }
   }
 
@@ -221,6 +237,49 @@ export default function Results(props) {
           </div>
           <div className="col-5">
             <p>{USDollar.format(unem_tax)}</p>
+          </div>
+        </div>
+        <hr />
+        <div className="row total">
+          <div className="col-7">
+            <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
+          </div>
+          <div className="col-5">
+            <p>{USDollar.format(total)}</p>
+          </div>
+        </div>
+      </div>
+    );
+  } else if (state === "california") {
+    SocialSecurityTax(wage);
+    MedicareTax(wage);
+    FutaTax(wage, 7000, 0.021);
+    UnemploymentTax(wage, 7000, sui);
+    TrainingTax(wage, 7000, 0.1);
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax + t_tax;
+
+    return (
+      <div className="Results">
+        <SocialMedicareFUTA
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
+        />
+        <div className="row">
+          <div className="col-7">
+            <p className="tag-name">CA State Unemployment Tax: </p>
+          </div>
+          <div className="col-5">
+            <p>{USDollar.format(unem_tax)}</p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-7">
+            <p className="tag-name">CA Employment Training Tax: </p>
+          </div>
+          <div className="col-5">
+            <p>{USDollar.format(t_tax)}</p>
           </div>
         </div>
         <hr />
