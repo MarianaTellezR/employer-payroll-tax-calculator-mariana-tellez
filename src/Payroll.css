@@ -17,6 +17,7 @@
 .Payroll p {
   text-align: justify;
   margin: 10px 25px;
+  line-height: 1.7;
 }
 
 .Payroll .payroll-left {
@@ -33,6 +34,8 @@
 .Payroll .payroll-right h3 {
   color: white;
   margin-bottom: 20px;
+  text-decoration: underline;
+  line-height: 1.5;
 }
 
 .Payroll .payroll-left .form-input {
