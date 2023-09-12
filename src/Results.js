@@ -293,6 +293,40 @@ export default function Results(props) {
         </div>
       </div>
     );
+  } else if (state === "colorado") {
+    SocialSecurityTax(wage);
+    MedicareTax(wage);
+    FutaTax(wage, 7000, 0.006);
+    UnemploymentTax(wage, 12200, sui);
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax;
+
+    return (
+      <div className="Results">
+        <SocialMedicareFUTA
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
+        />
+        <div className="row">
+          <div className="col-7">
+            <p className="tag-name">CO Unemployment Insurance Tax: </p>
+          </div>
+          <div className="col-5">
+            <p>{USDollar.format(unem_tax)}</p>
+          </div>
+        </div>
+        <hr />
+        <div className="row total">
+          <div className="col-7">
+            <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
+          </div>
+          <div className="col-5">
+            <p>{USDollar.format(total)}</p>
+          </div>
+        </div>
+      </div>
+    );
   } else {
     return (
       <div className="Results">
