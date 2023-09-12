@@ -103,20 +103,20 @@ export default function Results(props) {
         />
 
         <div className="row">
-          <div className="col-8">
+          <div className="col-7">
             <p className="tag-name">AL Unemployment Tax: </p>
           </div>
-          <div className="col-4">
+          <div className="col-5">
             <p>{USDollar.format(unem_tax)}</p>
           </div>
         </div>
         <div className="row">
-          <div className="col-8">
+          <div className="col-7">
             <p className="tag-name">
               Employment Security Enhancement Assessment (ESA):{" "}
             </p>
           </div>
-          <div className="col-4">
+          <div className="col-5">
             <p>{USDollar.format(esa)}</p>
           </div>
         </div>
@@ -124,10 +124,10 @@ export default function Results(props) {
         <hr />
 
         <div className="row total">
-          <div className="col-8">
+          <div className="col-7">
             <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
           </div>
-          <div className="col-4">
+          <div className="col-5">
             <p>{USDollar.format(total)} </p>
           </div>
         </div>
@@ -150,19 +150,19 @@ export default function Results(props) {
           futaa={USDollar.format(futa)}
         />
         <div className="row">
-          <div className="col-8">
+          <div className="col-7">
             <p className="tag-name">AK State Unemployment Tax: </p>
           </div>
-          <div className="col-4">
+          <div className="col-5">
             <p>{USDollar.format(unem_tax)}</p>
           </div>
         </div>
         <hr />
         <div className="row total">
-          <div className="col-8">
+          <div className="col-7">
             <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
           </div>
-          <div className="col-4">
+          <div className="col-5">
             <p>{USDollar.format(total)}</p>
           </div>
         </div>

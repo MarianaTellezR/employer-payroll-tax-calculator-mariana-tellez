@@ -104,3 +104,15 @@
     rgba(110, 172, 255, 1) 100%
   );
 }
+
+@media (max-width: 767px) {
+  .Payroll .payroll-right {
+    padding: 45px 20px;
+  }
+}
+
+@media (max-width: 430px) {
+  .Payroll .payroll-right {
+    padding: 40px 5px;
+  }
+}
