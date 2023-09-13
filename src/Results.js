@@ -2,6 +2,7 @@ import React from "react";
 import "./Results.css";
 import SocialMedicareFUTA from "./SocialMedicareFUTA";
 import Unemployment from "./Unemployment";
+import Training from "./Training";
 import Total from "./Total";
 
 export default function Results(props) {
@@ -235,6 +236,8 @@ export default function Results(props) {
 
     let headerUnemployment = "CA State Unemployment Tax:";
 
+    let headerTraining = "CA Employment Training Tax:";
+
     let total = wage + ss_tax + m_tax + futa + unem_tax + t_tax;
 
     return (
@@ -250,14 +253,10 @@ export default function Results(props) {
           unemployed={USDollar.format(unem_tax)}
         />
 
-        <div className="row">
-          <div className="col-7">
-            <p className="tag-name">CA Employment Training Tax: </p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(t_tax)}</p>
-          </div>
-        </div>
+        <Training
+          headerTrain={headerTraining}
+          training={USDollar.format(t_tax)}
+        />
 
         <hr />
 
@@ -329,6 +328,8 @@ export default function Results(props) {
 
     let headerUnemployment = "DE Unemployment Insurance Tax:";
 
+    let headerTraining = "DE Training Tax:";
+
     let total = wage + ss_tax + m_tax + futa + unem_tax + t_tax;
 
     return (
@@ -344,14 +345,10 @@ export default function Results(props) {
           unemployed={USDollar.format(unem_tax)}
         />
 
-        <div className="row">
-          <div className="col-7">
-            <p className="tag-name">DE Training Tax: </p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(t_tax)}</p>
-          </div>
-        </div>
+        <Training
+          headerTrain={headerTraining}
+          training={USDollar.format(t_tax)}
+        />
 
         <hr />
 
@@ -367,6 +364,8 @@ export default function Results(props) {
 
     let headerUnemployment = "DC Unemployment Compensation Tax:";
 
+    let headerTraining = "DC Admin. Assessment:";
+
     let total = wage + ss_tax + m_tax + futa + unem_tax + t_tax;
 
     return (
@@ -382,14 +381,10 @@ export default function Results(props) {
           unemployed={USDollar.format(unem_tax)}
         />
 
-        <div className="row">
-          <div className="col-7">
-            <p className="tag-name">DC Admin. Assessment:</p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(t_tax)}</p>
-          </div>
-        </div>
+        <Training
+          headerTrain={headerTraining}
+          training={USDollar.format(t_tax)}
+        />
 
         <hr />
 
@@ -433,6 +428,8 @@ export default function Results(props) {
 
     let headerUnemployment = "GA State Unemployment Tax:";
 
+    let headerTraining = "DC Admin. Assessment:";
+
     let total = wage + ss_tax + m_tax + futa + unem_tax + t_tax;
 
     return (
@@ -448,14 +445,10 @@ export default function Results(props) {
           unemployed={USDollar.format(unem_tax)}
         />
 
-        <div className="row">
-          <div className="col-7">
-            <p className="tag-name">DC Admin. Assessment:</p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(t_tax)}</p>
-          </div>
-        </div>
+        <Training
+          headerTrain={headerTraining}
+          training={USDollar.format(t_tax)}
+        />
 
         <hr />
 
