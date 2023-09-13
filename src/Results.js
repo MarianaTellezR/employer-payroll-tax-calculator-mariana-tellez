@@ -2,6 +2,7 @@ import React from "react";
 import "./Results.css";
 import SocialMedicareFUTA from "./SocialMedicareFUTA";
 import Unemployment from "./Unemployment";
+import Total from "./Total";
 
 export default function Results(props) {
   let state = props.state;
@@ -138,14 +139,7 @@ export default function Results(props) {
 
         <hr />
 
-        <div className="row total">
-          <div className="col-7">
-            <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(total)} </p>
-          </div>
-        </div>
+        <Total totaal={USDollar.format(total)} />
       </div>
     );
   } else if (state === "alaska") {
@@ -173,14 +167,7 @@ export default function Results(props) {
 
         <hr />
 
-        <div className="row total">
-          <div className="col-7">
-            <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(total)}</p>
-          </div>
-        </div>
+        <Total totaal={USDollar.format(total)} />
       </div>
     );
   } else if (state === "arizona") {
@@ -208,14 +195,7 @@ export default function Results(props) {
 
         <hr />
 
-        <div className="row total">
-          <div className="col-7">
-            <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(total)}</p>
-          </div>
-        </div>
+        <Total totaal={USDollar.format(total)} />
       </div>
     );
   } else if (state === "arkansas") {
@@ -243,14 +223,7 @@ export default function Results(props) {
 
         <hr />
 
-        <div className="row total">
-          <div className="col-7">
-            <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(total)}</p>
-          </div>
-        </div>
+        <Total totaal={USDollar.format(total)} />
       </div>
     );
   } else if (state === "california") {
@@ -285,15 +258,10 @@ export default function Results(props) {
             <p>{USDollar.format(t_tax)}</p>
           </div>
         </div>
+
         <hr />
-        <div className="row total">
-          <div className="col-7">
-            <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(total)}</p>
-          </div>
-        </div>
+
+        <Total totaal={USDollar.format(total)} />
       </div>
     );
   } else if (state === "colorado") {
@@ -321,14 +289,7 @@ export default function Results(props) {
 
         <hr />
 
-        <div className="row total">
-          <div className="col-7">
-            <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(total)}</p>
-          </div>
-        </div>
+        <Total totaal={USDollar.format(total)} />
       </div>
     );
   } else if (state === "connecticut") {
@@ -356,14 +317,7 @@ export default function Results(props) {
 
         <hr />
 
-        <div className="row total">
-          <div className="col-7">
-            <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(total)}</p>
-          </div>
-        </div>
+        <Total totaal={USDollar.format(total)} />
       </div>
     );
   } else if (state === "delaware") {
@@ -401,14 +355,7 @@ export default function Results(props) {
 
         <hr />
 
-        <div className="row total">
-          <div className="col-7">
-            <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(total)}</p>
-          </div>
-        </div>
+        <Total totaal={USDollar.format(total)} />
       </div>
     );
   } else if (state === "columbia") {
@@ -446,14 +393,7 @@ export default function Results(props) {
 
         <hr />
 
-        <div className="row total">
-          <div className="col-7">
-            <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(total)}</p>
-          </div>
-        </div>
+        <Total totaal={USDollar.format(total)} />
       </div>
     );
   } else if (state === "florida") {
@@ -481,14 +421,7 @@ export default function Results(props) {
 
         <hr />
 
-        <div className="row total">
-          <div className="col-7">
-            <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(total)}</p>
-          </div>
-        </div>
+        <Total totaal={USDollar.format(total)} />
       </div>
     );
   } else if (state === "georgia") {
@@ -526,14 +459,7 @@ export default function Results(props) {
 
         <hr />
 
-        <div className="row total">
-          <div className="col-7">
-            <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(total)}</p>
-          </div>
-        </div>
+        <Total totaal={USDollar.format(total)} />
       </div>
     );
   } else {
