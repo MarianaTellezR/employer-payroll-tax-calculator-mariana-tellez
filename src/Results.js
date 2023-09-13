@@ -631,6 +631,170 @@ export default function Results(props) {
         <Total totaal={USDollar.format(total)} />
       </div>
     );
+  } else if (state === "kentucky") {
+    SocialSecurityTax(wage, 118000);
+    MedicareTax(wage);
+    FutaTax(wage, 7000, 0.006);
+    UnemploymentTax(wage, 10200, sui);
+    TrainingTax(wage, 10200, 0.21);
+
+    let headerUnemployment = "KY Unemployment Tax:";
+
+    let headerTraining = "ME CSSF Tax UI Tax Surcharge:";
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax + t_tax;
+
+    return (
+      <div className="Results">
+        <SocialMedicareFUTA
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
+        />
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
+        <Training
+          headerTrain={headerTraining}
+          training={USDollar.format(t_tax)}
+        />
+
+        <hr />
+
+        <Total totaal={USDollar.format(total)} />
+      </div>
+    );
+  } else if (state === "louisiana") {
+    SocialSecurityTax(wage, 118000);
+    MedicareTax(wage);
+    FutaTax(wage, 7000, 0.006);
+    UnemploymentTax(wage, 7700, sui);
+
+    let headerUnemployment = "LA Unemployment Insurance Tax:";
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax;
+
+    return (
+      <div className="Results">
+        <SocialMedicareFUTA
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
+        />
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
+        <hr />
+
+        <Total totaal={USDollar.format(total)} />
+      </div>
+    );
+  } else if (state === "maine") {
+    SocialSecurityTax(wage, 118000);
+    MedicareTax(wage);
+    FutaTax(wage, 7000, 0.006);
+    UnemploymentTax(wage, 12000, sui);
+    TrainingTax(wage, 12000, 0.06);
+
+    let headerUnemployment = "ME Unemployment Contributions:";
+
+    let headerTraining = "ME UI Tax Surcharge:";
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax + t_tax;
+
+    return (
+      <div className="Results">
+        <SocialMedicareFUTA
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
+        />
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
+        <Training
+          headerTrain={headerTraining}
+          training={USDollar.format(t_tax)}
+        />
+
+        <hr />
+
+        <Total totaal={USDollar.format(total)} />
+      </div>
+    );
+  } else if (state === "maryland") {
+    SocialSecurityTax(wage, 118000);
+    MedicareTax(wage);
+    FutaTax(wage, 7000, 0.006);
+    UnemploymentTax(wage, 8500, sui);
+
+    let headerUnemployment = "MD Unemployment Tax:";
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax;
+
+    return (
+      <div className="Results">
+        <SocialMedicareFUTA
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
+        />
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
+        <hr />
+
+        <Total totaal={USDollar.format(total)} />
+      </div>
+    );
+  } else if (state === "massachusetts") {
+    SocialSecurityTax(wage, 118000);
+    MedicareTax(wage);
+    FutaTax(wage, 7000, 0.006);
+    UnemploymentTax(wage, 15000, sui);
+    TrainingTax(wage, 15000, 0.056);
+
+    let headerUnemployment = "MA Unemployment Insurance Tax:";
+
+    let headerTraining = "MA Workforce Training Tax:";
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax + t_tax;
+
+    return (
+      <div className="Results">
+        <SocialMedicareFUTA
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
+        />
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
+        <Training
+          headerTrain={headerTraining}
+          training={USDollar.format(t_tax)}
+        />
+
+        <hr />
+
+        <Total totaal={USDollar.format(total)} />
+      </div>
+    );
   } else {
     return (
       <div className="Results">
