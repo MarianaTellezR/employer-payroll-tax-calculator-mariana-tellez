@@ -1,6 +1,7 @@
 import React from "react";
 import "./Results.css";
 import SocialMedicareFUTA from "./SocialMedicareFUTA";
+import Unemployment from "./Unemployment";
 
 export default function Results(props) {
   let state = props.state;
@@ -107,6 +108,8 @@ export default function Results(props) {
     UnemploymentTax(wage, 8000, sui);
     EmploymentSecurityEnhancementESA(wage, 8000);
 
+    let headerUnemployment = "AL Unemployment Tax:";
+
     let total = wage + ss_tax + m_tax + futa + unem_tax + esa;
 
     return (
@@ -117,14 +120,11 @@ export default function Results(props) {
           futaa={USDollar.format(futa)}
         />
 
-        <div className="row">
-          <div className="col-7">
-            <p className="tag-name">AL Unemployment Tax: </p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(unem_tax)}</p>
-          </div>
-        </div>
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
         <div className="row">
           <div className="col-7">
             <p className="tag-name">
@@ -154,6 +154,8 @@ export default function Results(props) {
     FutaTax(wage, 7000, 0.006);
     UnemploymentTax(wage, 39700, sui);
 
+    let headerUnemployment = "AK State Unemployment Tax:";
+
     let total = wage + ss_tax + m_tax + futa + unem_tax;
 
     return (
@@ -163,15 +165,14 @@ export default function Results(props) {
           medicare={USDollar.format(m_tax)}
           futaa={USDollar.format(futa)}
         />
-        <div className="row">
-          <div className="col-7">
-            <p className="tag-name">AK State Unemployment Tax: </p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(unem_tax)}</p>
-          </div>
-        </div>
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
         <hr />
+
         <div className="row total">
           <div className="col-7">
             <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
@@ -188,6 +189,8 @@ export default function Results(props) {
     FutaTax(wage, 7000, 0.006);
     UnemploymentTax(wage, 7000, sui);
 
+    let headerUnemployment = "AZ State Unemployment Tax:";
+
     let total = wage + ss_tax + m_tax + futa + unem_tax;
 
     return (
@@ -197,15 +200,14 @@ export default function Results(props) {
           medicare={USDollar.format(m_tax)}
           futaa={USDollar.format(futa)}
         />
-        <div className="row">
-          <div className="col-7">
-            <p className="tag-name">AZ State Unemployment Tax: </p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(unem_tax)}</p>
-          </div>
-        </div>
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
         <hr />
+
         <div className="row total">
           <div className="col-7">
             <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
@@ -222,6 +224,8 @@ export default function Results(props) {
     FutaTax(wage, 7000, 0.006);
     UnemploymentTax(wage, 12000, sui);
 
+    let headerUnemployment = "AR State Unemployment Tax:";
+
     let total = wage + ss_tax + m_tax + futa + unem_tax;
 
     return (
@@ -231,15 +235,14 @@ export default function Results(props) {
           medicare={USDollar.format(m_tax)}
           futaa={USDollar.format(futa)}
         />
-        <div className="row">
-          <div className="col-7">
-            <p className="tag-name">AR State Unemployment Tax: </p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(unem_tax)}</p>
-          </div>
-        </div>
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
         <hr />
+
         <div className="row total">
           <div className="col-7">
             <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
@@ -257,6 +260,8 @@ export default function Results(props) {
     UnemploymentTax(wage, 7000, sui);
     TrainingTax(wage, 7000, 0.1);
 
+    let headerUnemployment = "CA State Unemployment Tax:";
+
     let total = wage + ss_tax + m_tax + futa + unem_tax + t_tax;
 
     return (
@@ -266,14 +271,12 @@ export default function Results(props) {
           medicare={USDollar.format(m_tax)}
           futaa={USDollar.format(futa)}
         />
-        <div className="row">
-          <div className="col-7">
-            <p className="tag-name">CA State Unemployment Tax: </p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(unem_tax)}</p>
-          </div>
-        </div>
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
         <div className="row">
           <div className="col-7">
             <p className="tag-name">CA Employment Training Tax: </p>
@@ -299,6 +302,8 @@ export default function Results(props) {
     FutaTax(wage, 7000, 0.006);
     UnemploymentTax(wage, 12200, sui);
 
+    let headerUnemployment = "CO Unemployment Insurance Tax:";
+
     let total = wage + ss_tax + m_tax + futa + unem_tax;
 
     return (
@@ -308,15 +313,14 @@ export default function Results(props) {
           medicare={USDollar.format(m_tax)}
           futaa={USDollar.format(futa)}
         />
-        <div className="row">
-          <div className="col-7">
-            <p className="tag-name">CO Unemployment Insurance Tax: </p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(unem_tax)}</p>
-          </div>
-        </div>
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
         <hr />
+
         <div className="row total">
           <div className="col-7">
             <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
@@ -333,6 +337,8 @@ export default function Results(props) {
     FutaTax(wage, 7000, 0.027);
     UnemploymentTax(wage, 15000, sui);
 
+    let headerUnemployment = "CT State Unemployment Tax:";
+
     let total = wage + ss_tax + m_tax + futa + unem_tax;
 
     return (
@@ -342,15 +348,14 @@ export default function Results(props) {
           medicare={USDollar.format(m_tax)}
           futaa={USDollar.format(futa)}
         />
-        <div className="row">
-          <div className="col-7">
-            <p className="tag-name">CT State Unemployment Tax: </p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(unem_tax)}</p>
-          </div>
-        </div>
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
         <hr />
+
         <div className="row total">
           <div className="col-7">
             <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
@@ -368,6 +373,8 @@ export default function Results(props) {
     UnemploymentTax(wage, 18500, sui);
     TrainingTax(wage, 18500, 0.085);
 
+    let headerUnemployment = "DE Unemployment Insurance Tax:";
+
     let total = wage + ss_tax + m_tax + futa + unem_tax + t_tax;
 
     return (
@@ -377,14 +384,12 @@ export default function Results(props) {
           medicare={USDollar.format(m_tax)}
           futaa={USDollar.format(futa)}
         />
-        <div className="row">
-          <div className="col-7">
-            <p className="tag-name">DE Unemployment Insurance Tax: </p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(unem_tax)}</p>
-          </div>
-        </div>
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
         <div className="row">
           <div className="col-7">
             <p className="tag-name">DE Training Tax: </p>
@@ -393,7 +398,9 @@ export default function Results(props) {
             <p>{USDollar.format(t_tax)}</p>
           </div>
         </div>
+
         <hr />
+
         <div className="row total">
           <div className="col-7">
             <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
@@ -411,6 +418,8 @@ export default function Results(props) {
     UnemploymentTax(wage, 9000, sui);
     TrainingTax(wage, 9000, 0.2);
 
+    let headerUnemployment = "DC Unemployment Compensation Tax:";
+
     let total = wage + ss_tax + m_tax + futa + unem_tax + t_tax;
 
     return (
@@ -420,14 +429,12 @@ export default function Results(props) {
           medicare={USDollar.format(m_tax)}
           futaa={USDollar.format(futa)}
         />
-        <div className="row">
-          <div className="col-7">
-            <p className="tag-name">DC Unemployment Compensation Tax:</p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(unem_tax)}</p>
-          </div>
-        </div>
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
         <div className="row">
           <div className="col-7">
             <p className="tag-name">DC Admin. Assessment:</p>
@@ -436,7 +443,9 @@ export default function Results(props) {
             <p>{USDollar.format(t_tax)}</p>
           </div>
         </div>
+
         <hr />
+
         <div className="row total">
           <div className="col-7">
             <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
@@ -453,6 +462,8 @@ export default function Results(props) {
     FutaTax(wage, 7000, 0.006);
     UnemploymentTax(wage, 7000, sui);
 
+    let headerUnemployment = "FL State Unemployment Tax:";
+
     let total = wage + ss_tax + m_tax + futa + unem_tax;
 
     return (
@@ -462,15 +473,14 @@ export default function Results(props) {
           medicare={USDollar.format(m_tax)}
           futaa={USDollar.format(futa)}
         />
-        <div className="row">
-          <div className="col-7">
-            <p className="tag-name">FL State Unemployment Tax: </p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(unem_tax)}</p>
-          </div>
-        </div>
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
         <hr />
+
         <div className="row total">
           <div className="col-7">
             <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
@@ -488,6 +498,8 @@ export default function Results(props) {
     UnemploymentTax(wage, 9500, sui);
     TrainingTax(wage, 9500, 0.08);
 
+    let headerUnemployment = "GA State Unemployment Tax:";
+
     let total = wage + ss_tax + m_tax + futa + unem_tax + t_tax;
 
     return (
@@ -497,14 +509,12 @@ export default function Results(props) {
           medicare={USDollar.format(m_tax)}
           futaa={USDollar.format(futa)}
         />
-        <div className="row">
-          <div className="col-7">
-            <p className="tag-name">GA State Unemployment Tax:</p>
-          </div>
-          <div className="col-5">
-            <p>{USDollar.format(unem_tax)}</p>
-          </div>
-        </div>
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
         <div className="row">
           <div className="col-7">
             <p className="tag-name">DC Admin. Assessment:</p>
@@ -513,7 +523,9 @@ export default function Results(props) {
             <p>{USDollar.format(t_tax)}</p>
           </div>
         </div>
+
         <hr />
+
         <div className="row total">
           <div className="col-7">
             <p className="tag-name">Total Annual Cost To Hire This Employee:</p>
