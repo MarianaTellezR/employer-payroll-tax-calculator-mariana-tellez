@@ -38,6 +38,9 @@ export default function Results(props) {
   let wage_tt = wage;
   let t_tax = 0;
 
+  //Disability Tax
+  let dis_tax = 0;
+
   function SocialSecurityTax(wage, top) {
     if (wage > top) {
       wage_ss_tax = top;
@@ -101,6 +104,11 @@ export default function Results(props) {
       t_tax = wage_tt * (percentage / 100);
       return t_tax;
     }
+  }
+
+  function DisabilityTax(wage, num) {
+    dis_tax = wage * (num / 100);
+    return dis_tax;
   }
 
   if (state === "alabama") {
@@ -916,6 +924,134 @@ export default function Results(props) {
         <Unemployment
           headerUnemploy={headerUnemployment}
           unemployed={USDollar.format(unem_tax)}
+        />
+
+        <hr />
+
+        <Total totaal={USDollar.format(total)} />
+      </div>
+    );
+  } else if (state === "montana") {
+    SocialSecurityTax(wage, 118000);
+    MedicareTax(wage);
+    FutaTax(wage, 7000, 0.006);
+    UnemploymentTax(wage, 30500, sui);
+
+    let headerUnemployment = "MT Unemployment Tax:";
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax;
+
+    return (
+      <div className="Results">
+        <SocialMedicareFUTA
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
+        />
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
+        <hr />
+
+        <Total totaal={USDollar.format(total)} />
+      </div>
+    );
+  } else if (state === "nebraska") {
+    SocialSecurityTax(wage, 118000);
+    MedicareTax(wage);
+    FutaTax(wage, 7000, 0.006);
+    UnemploymentTax(wage, 9000, sui);
+
+    let headerUnemployment = "NE SUIT State Unemployment Tax:";
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax;
+
+    return (
+      <div className="Results">
+        <SocialMedicareFUTA
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
+        />
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
+        <hr />
+
+        <Total totaal={USDollar.format(total)} />
+      </div>
+    );
+  } else if (state === "nevada") {
+    SocialSecurityTax(wage, 118000);
+    MedicareTax(wage);
+    FutaTax(wage, 7000, 0.006);
+    UnemploymentTax(wage, 28200, sui);
+    TrainingTax(wage, 28200, 0.05);
+
+    let headerUnemployment = "Nevada State Unemployment Tax:";
+
+    let headerTraining = "Nevada Career Enhancement Program:";
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax + t_tax;
+
+    return (
+      <div className="Results">
+        <SocialMedicareFUTA
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
+        />
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
+        <Training
+          headerTrain={headerTraining}
+          training={USDollar.format(t_tax)}
+        />
+
+        <hr />
+
+        <Total totaal={USDollar.format(total)} />
+      </div>
+    );
+  } else if (state === "newhampshire") {
+    SocialSecurityTax(wage, 118000);
+    MedicareTax(wage);
+    FutaTax(wage, 7000, 0.006);
+    UnemploymentTax(wage, 14000, sui);
+    TrainingTax(wage, 14000, 0.2);
+
+    let headerUnemployment = "NH Unemployment Insurance:";
+
+    let headerTraining = "NH Administrative Contribution:";
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax + t_tax;
+
+    return (
+      <div className="Results">
+        <SocialMedicareFUTA
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
+        />
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
+        <Training
+          headerTrain={headerTraining}
+          training={USDollar.format(t_tax)}
         />
 
         <hr />
