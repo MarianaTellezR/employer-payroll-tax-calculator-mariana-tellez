@@ -8,7 +8,7 @@ export default function Training(props) {
           <p className="tag-name">{props.headerTrain}</p>
         </div>
         <div className="col-5">
-          <p>{props.training}</p>
+          <p className="data-results">{props.training}</p>
         </div>
       </div>
     </div>

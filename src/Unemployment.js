@@ -8,7 +8,7 @@ export default function Unemployment(props) {
           <p className="tag-name">{props.headerUnemploy}</p>
         </div>
         <div className="col-5">
-          <p>{props.unemployed}</p>
+          <p className="data-results">{props.unemployed}</p>
         </div>
       </div>
     </div>

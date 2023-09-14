@@ -134,7 +134,7 @@ export default function Results(props) {
             </p>
           </div>
           <div className="col-5">
-            <p>{USDollar.format(esa)}</p>
+            <p className="data-results">{USDollar.format(esa)}</p>
           </div>
         </div>
 

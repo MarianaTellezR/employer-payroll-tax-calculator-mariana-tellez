@@ -2,7 +2,7 @@
   color: white;
 }
 
-.Results p {
+.Results .data-results {
   font-size: 18px;
   text-align: end;
 }
@@ -16,4 +16,25 @@
 
 .Results hr {
   color: rgb(41, 23, 105);
+}
+
+@media (max-width: 880px) {
+  .Results .data-results,
+  .Results .tag-name {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .Results .data-results,
+  .Results .tag-name {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 453px) {
+  .Results .data-results,
+  .Results .tag-name {
+    font-size: 14px;
+  }
 }
