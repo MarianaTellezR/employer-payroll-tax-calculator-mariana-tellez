@@ -4,6 +4,7 @@ import SocialMedicareFUTA from "./SocialMedicareFUTA";
 import Unemployment from "./Unemployment";
 import Disability from "./Disability";
 import Training from "./Training";
+import AdditionalTaxes from "./AdditionalTaxes";
 import Total from "./Total";
 
 export default function Results(props) {
@@ -1100,6 +1101,189 @@ export default function Results(props) {
         <Training
           headerTrain={headerTraining}
           training={USDollar.format(t_tax)}
+        />
+
+        <hr />
+
+        <Total totaal={USDollar.format(total)} />
+      </div>
+    );
+  } else if (state === "newmexico") {
+    SocialSecurityTax(wage, 118000);
+    MedicareTax(wage);
+    FutaTax(wage, 7000, 0.006);
+    UnemploymentTax(wage, 24100, sui);
+
+    let headerUnemployment = "NM Unemployment Insurance Tax:";
+
+    let headerAdditional = "NM Workers' Compensation Fee";
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax + 2.3;
+
+    return (
+      <div className="Results">
+        <SocialMedicareFUTA
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
+        />
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
+        <AdditionalTaxes
+          headerAdditional={headerAdditional}
+          dataAdditional={USDollar.format(2.3)}
+        />
+
+        <hr />
+
+        <Total totaal={USDollar.format(total)} />
+      </div>
+    );
+  } else if (state === "newyork") {
+    SocialSecurityTax(wage, 118000);
+    MedicareTax(wage);
+    FutaTax(wage, 7000, 0.006);
+    UnemploymentTax(wage, 10700, sui);
+    TrainingTax(wage, 10700, 0.075);
+
+    let headerUnemployment = "NY State Unemployment Tax:";
+
+    let headerTraining = "NY Reemployment:";
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax + t_tax;
+
+    return (
+      <div className="Results">
+        <SocialMedicareFUTA
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
+        />
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
+        <Training
+          headerTrain={headerTraining}
+          training={USDollar.format(t_tax)}
+        />
+
+        <hr />
+
+        <Total totaal={USDollar.format(total)} />
+      </div>
+    );
+  } else if (state === "northcarolina") {
+    SocialSecurityTax(wage, 118000);
+    MedicareTax(wage);
+    FutaTax(wage, 7000, 0.006);
+    UnemploymentTax(wage, 22300, sui);
+
+    let headerUnemployment = "NC Unemployment Tax:";
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax;
+
+    return (
+      <div className="Results">
+        <SocialMedicareFUTA
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
+        />
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
+        <hr />
+
+        <Total totaal={USDollar.format(total)} />
+      </div>
+    );
+  } else if (state === "northdakota") {
+    SocialSecurityTax(wage, 118000);
+    MedicareTax(wage);
+    FutaTax(wage, 7000, 0.006);
+    UnemploymentTax(wage, 37200, sui);
+
+    let headerUnemployment = "ND State Unemployment Tax:";
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax;
+
+    return (
+      <div className="Results">
+        <SocialMedicareFUTA
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
+        />
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
+        <hr />
+
+        <Total totaal={USDollar.format(total)} />
+      </div>
+    );
+  } else if (state === "ohio") {
+    SocialSecurityTax(wage, 118000);
+    MedicareTax(wage);
+    FutaTax(wage, 7000, 0.021);
+    UnemploymentTax(wage, 9000, sui);
+
+    let headerUnemployment = "OH State Unemployment Tax:";
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax;
+
+    return (
+      <div className="Results">
+        <SocialMedicareFUTA
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
+        />
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
+        <hr />
+
+        <Total totaal={USDollar.format(total)} />
+      </div>
+    );
+  } else if (state === "oklahoma") {
+    SocialSecurityTax(wage, 118000);
+    MedicareTax(wage);
+    FutaTax(wage, 7000, 0.006);
+    UnemploymentTax(wage, 17500, sui);
+
+    let headerUnemployment = "OK Unemployment Compensation Tax:";
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax;
+
+    return (
+      <div className="Results">
+        <SocialMedicareFUTA
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
+        />
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
         />
 
         <hr />
