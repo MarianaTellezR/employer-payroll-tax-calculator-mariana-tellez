@@ -2,6 +2,7 @@ import React from "react";
 import "./Results.css";
 import SocialMedicareFUTA from "./SocialMedicareFUTA";
 import Unemployment from "./Unemployment";
+import Disability from "./Disability";
 import Training from "./Training";
 import Total from "./Total";
 
@@ -39,6 +40,7 @@ export default function Results(props) {
   let t_tax = 0;
 
   //Disability Tax
+  let wage_dt = wage;
   let dis_tax = 0;
 
   function SocialSecurityTax(wage, top) {
@@ -106,9 +108,16 @@ export default function Results(props) {
     }
   }
 
-  function DisabilityTax(wage, num) {
-    dis_tax = wage * (num / 100);
-    return dis_tax;
+  function DisabilityTax(wage, top, num) {
+    if (wage > top) {
+      wage_dt = top;
+      dis_tax = wage_dt * (num / 100);
+      return dis_tax;
+    } else {
+      wage_dt = wage;
+      dis_tax = wage_dt * (num / 100);
+      return dis_tax;
+    }
   }
 
   if (state === "alabama") {
@@ -1048,6 +1057,45 @@ export default function Results(props) {
           headerUnemploy={headerUnemployment}
           unemployed={USDollar.format(unem_tax)}
         />
+
+        <Training
+          headerTrain={headerTraining}
+          training={USDollar.format(t_tax)}
+        />
+
+        <hr />
+
+        <Total totaal={USDollar.format(total)} />
+      </div>
+    );
+  } else if (state === "newjersey") {
+    SocialSecurityTax(wage, 118000);
+    MedicareTax(wage);
+    FutaTax(wage, 7000, 0.006);
+    UnemploymentTax(wage, 32600, sui);
+    DisabilityTax(wage, 32600, 0.5);
+    TrainingTax(wage, 32600, 0.1175);
+
+    let headerUnemployment = "NJ Employer SUI:";
+
+    let headerTraining = "NJ Workforce Development:";
+
+    let total = wage + ss_tax + m_tax + futa + unem_tax + dis_tax + t_tax;
+
+    return (
+      <div className="Results">
+        <SocialMedicareFUTA
+          social={USDollar.format(ss_tax)}
+          medicare={USDollar.format(m_tax)}
+          futaa={USDollar.format(futa)}
+        />
+
+        <Unemployment
+          headerUnemploy={headerUnemployment}
+          unemployed={USDollar.format(unem_tax)}
+        />
+
+        <Disability disabilityTax={USDollar.format(dis_tax)} />
 
         <Training
           headerTrain={headerTraining}
