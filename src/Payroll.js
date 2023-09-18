@@ -37,12 +37,13 @@ export default function Payroll() {
         <div className="row">
           <div className="col-sm-12 col-md-6 payroll-left">
             <h1>Unlock Payroll Ease with a Single Click!</h1>
+            <h3>Simplify Payroll Taxes with Confidence</h3>
             <p>
-              Simplify Payroll Taxes with Confidence! Our free Employer Payroll
-              Tax Calculator eliminates the complexities of business taxes. Say
-              goodbye to manual calculations and tax headaches. Get accurate
-              deductions instantly, streamlining your payroll tax management.
-              Focus on business growth with confidence. Try it today!
+              Our free Employer Payroll Tax Calculator eliminates the
+              complexities of business taxes. Say goodbye to manual calculations
+              and tax headaches. Get accurate deductions instantly, streamlining
+              your payroll tax management. Focus on business growth with
+              confidence. Try it today!
             </p>
             <form onSubmit={handleSubmit} className="form-input">
               <label forhtml="states">State:</label>
@@ -147,12 +148,13 @@ export default function Payroll() {
         <div className="row">
           <div className="col-sm-12 col-md-6 payroll-left">
             <h1>Unlock Payroll Ease with a Single Click!</h1>
+            <h3>Simplify Payroll Taxes with Confidence</h3>
             <p>
-              Simplify Payroll Taxes with Confidence! Our free Employer Payroll
-              Tax Calculator eliminates the complexities of business taxes. Say
-              goodbye to manual calculations and tax headaches. Get accurate
-              deductions instantly, streamlining your payroll tax management.
-              Focus on business growth with confidence. Try it today!
+              Our free Employer Payroll Tax Calculator eliminates the
+              complexities of business taxes. Say goodbye to manual calculations
+              and tax headaches. Get accurate deductions instantly, streamlining
+              your payroll tax management. Focus on business growth with
+              confidence. Try it today!
             </p>
             <form onSubmit={handleSubmit} className="form-input">
               <label forhtml="states">State:</label>
