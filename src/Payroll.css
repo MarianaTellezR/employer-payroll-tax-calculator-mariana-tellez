@@ -28,14 +28,14 @@
 
 .Payroll button {
   background-color: white;
-  color: #5951b8;
-  border-radius: 20px;
-  border: 1px solid #5951b8;
+  color: #5f71d3;
+  border-radius: 30px;
+  border: 1px solid #5f71d3;
   transition: all 125ms ease-in-out;
 }
 
 .Payroll button:hover {
-  background-color: #5951b8;
+  background-color: #5f71d3;
   color: white;
 }
 
