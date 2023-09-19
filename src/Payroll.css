@@ -26,15 +26,17 @@
   margin-top: 0px;
 }
 
-.Payroll button {
+.Payroll .more-info {
   background-color: white;
   color: #5f71d3;
   border-radius: 30px;
   border: 1px solid #5f71d3;
   transition: all 125ms ease-in-out;
+  margin-right: 0px;
+  padding: 2px 8px;
 }
 
-.Payroll button:hover {
+.Payroll .more-info:hover {
   background-color: #5f71d3;
   color: white;
 }

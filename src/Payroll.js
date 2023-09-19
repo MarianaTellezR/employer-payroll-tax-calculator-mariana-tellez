@@ -48,16 +48,17 @@ export default function Payroll() {
             </p>
             <form onSubmit={handleSubmit} className="form-input">
               <div className="row">
-                <div className="col-6 text-start">
+                <div className="col-6 d-flex flex-column justify-content-center align-items-start">
                   <label forhtml="states">State:</label>
                 </div>
                 <div className="col-6 d-flex flex-column justify-content-center align-items-end">
-                  <button
+                  <p
                     data-tooltip-id="my-tooltip"
                     data-tooltip-content="What state does your employee work in?"
+                    className="more-info"
                   >
                     ?
-                  </button>
+                  </p>
                   <Tooltip id="my-tooltip" />
                 </div>
               </div>
@@ -120,16 +121,17 @@ export default function Payroll() {
                 <option value="wyoming">Wyoming</option>
               </select>
               <div className="row">
-                <div className="col-6 text-start">
+                <div className="col-6 d-flex flex-column justify-content-center align-items-start">
                   <label forhtml="wage">Annual Wage:</label>
                 </div>
                 <div className="col-6 d-flex flex-column justify-content-center align-items-end">
-                  <button
+                  <p
                     data-tooltip-id="my-tooltip"
                     data-tooltip-content="How much does your employee make annually?"
+                    className="more-info"
                   >
                     ?
-                  </button>
+                  </p>
                   <Tooltip id="my-tooltip" />
                 </div>
               </div>
@@ -145,16 +147,17 @@ export default function Payroll() {
                 ></input>
               </div>
               <div className="row">
-                <div className="col-6 text-start">
+                <div className="col-6 d-flex flex-column justify-content-center align-items-start">
                   <label forhtml="sui">SUI Rate:</label>
                 </div>
                 <div className="col-6 d-flex flex-column justify-content-center align-items-end">
-                  <button
+                  <p
                     data-tooltip-id="my-tooltip"
-                    data-tooltip-content="Your state assigns a rate, which depends on factors like your business's age, employee count and more."
+                    data-tooltip-content="This rate is assigned to you by your state."
+                    className="more-info"
                   >
                     ?
-                  </button>
+                  </p>
                   <Tooltip id="my-tooltip" />
                 </div>
               </div>
@@ -200,16 +203,17 @@ export default function Payroll() {
             </p>
             <form onSubmit={handleSubmit} className="form-input">
               <div className="row">
-                <div className="col-6 text-start">
+                <div className="col-6 d-flex flex-column justify-content-center align-items-start">
                   <label forhtml="states">State:</label>
                 </div>
                 <div className="col-6 d-flex flex-column justify-content-center align-items-end">
-                  <button
+                  <p
                     data-tooltip-id="my-tooltip"
                     data-tooltip-content="What state does your employee work in?"
+                    className="more-info"
                   >
                     ?
-                  </button>
+                  </p>
                   <Tooltip id="my-tooltip" />
                 </div>
               </div>
@@ -272,16 +276,17 @@ export default function Payroll() {
                 <option value="wyoming">Wyoming</option>
               </select>
               <div className="row">
-                <div className="col-6 text-start">
+                <div className="col-6 d-flex flex-column justify-content-center align-items-start">
                   <label forhtml="wage">Annual Wage:</label>
                 </div>
                 <div className="col-6 d-flex flex-column justify-content-center align-items-end">
-                  <button
+                  <p
                     data-tooltip-id="my-tooltip"
                     data-tooltip-content="How much does your employee make annually?"
+                    className="more-info"
                   >
                     ?
-                  </button>
+                  </p>
                   <Tooltip id="my-tooltip" />
                 </div>
               </div>
@@ -296,16 +301,17 @@ export default function Payroll() {
                 ></input>
               </div>
               <div className="row">
-                <div className="col-6 text-start">
+                <div className="col-6 d-flex flex-column justify-content-center align-items-start">
                   <label forhtml="sui">SUI Rate:</label>
                 </div>
                 <div className="col-6 d-flex flex-column justify-content-center align-items-end">
-                  <button
+                  <p
                     data-tooltip-id="my-tooltip"
-                    data-tooltip-content="Your state assigns a rate, which depends on factors like your business's age, employee count and more."
+                    data-tooltip-content="This rate is assigned to you by your state."
+                    className="more-info"
                   >
                     ?
-                  </button>
+                  </p>
                   <Tooltip id="my-tooltip" />
                 </div>
               </div>
