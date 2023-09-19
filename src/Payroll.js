@@ -3,6 +3,7 @@ import "./Payroll.css";
 import Results from "./Results";
 import Noresults from "./Noresults";
 import ResultsImage from "./ResultsImage";
+import { Tooltip } from "react-tooltip";
 
 export default function Payroll() {
   const [state, setState] = useState("alaska");
@@ -46,7 +47,20 @@ export default function Payroll() {
               Try it today!
             </p>
             <form onSubmit={handleSubmit} className="form-input">
-              <label forhtml="states">State:</label>
+              <div className="row">
+                <div className="col-6 text-start">
+                  <label forhtml="states">State:</label>
+                </div>
+                <div className="col-6 text-end">
+                  <button
+                    data-tooltip-id="my-tooltip"
+                    data-tooltip-content="What state does your employee work in?"
+                  >
+                    ?
+                  </button>
+                  <Tooltip id="my-tooltip" />
+                </div>
+              </div>
               <select
                 value={state}
                 onChange={handleChangeState}
