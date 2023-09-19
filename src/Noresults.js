@@ -5,20 +5,52 @@ export default function Noresults() {
   return (
     <div className="Noresults">
       <img
-        className="payroll-tax-calculator"
+        className="payroll-tax-calculator main-noresults"
         alt="Payroll Tax Calculator by Mariana Tellez Resendiz"
         src={require("./payroll-tax.png")}
       />
-      <h3>
-        Employer Payroll Tax Calculator: Your Hassle-Free Payroll Processing
-        Solution
-      </h3>
-      <p>
-        Experience the convenience of precision in your payroll management with
-        our user-friendly tool. Calculate your tax deductions and withholdings
-        effortlessly, ensuring accurate, swift, and stress-free payroll
-        processing.
-      </p>
+      <h3>Why should you use a payroll calculator?</h3>
+
+      <div className="d-flex flex-column flex-sm-column flex-md-row  justify-content-center align-items-center">
+        <img
+          className="check"
+          alt="Using Payroll Tax Calculator"
+          src={require("./check.png")}
+        />
+        <p>Estimate hiring costs</p>
+      </div>
+      <div className="d-flex flex-column flex-sm-column flex-md-row  justify-content-center align-items-center">
+        <img
+          className="check"
+          alt="Using Payroll Tax Calculator"
+          src={require("./check.png")}
+        />
+        <p>Take the guesswork out of payroll</p>
+      </div>
+      <div className="d-flex flex-column flex-sm-column flex-md-row  justify-content-center align-items-center">
+        <img
+          className="check"
+          alt="Using Payroll Tax Calculator"
+          src={require("./check.png")}
+        />
+        <p>Avoid significant penalties</p>
+      </div>
+      <div className="d-flex flex-column flex-sm-column flex-md-row  justify-content-center align-items-center">
+        <img
+          className="check"
+          alt="Using Payroll Tax Calculator"
+          src={require("./check.png")}
+        />
+        <p>Pay employees accurately and on time</p>
+      </div>
+      <div className="d-flex flex-column flex-sm-column flex-md-row  justify-content-center align-items-center">
+        <img
+          className="check"
+          alt="Using Payroll Tax Calculator"
+          src={require("./check.png")}
+        />
+        <p>Invest more time into running your business</p>
+      </div>
     </div>
   );
 }

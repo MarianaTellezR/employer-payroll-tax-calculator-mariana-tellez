@@ -39,11 +39,11 @@ export default function Payroll() {
             <h1>Unlock Payroll Ease with a Single Click!</h1>
             <h3>Simplify Payroll Taxes with Confidence</h3>
             <p>
-              Our free Employer Payroll Tax Calculator eliminates the
-              complexities of business taxes. Say goodbye to manual calculations
-              and tax headaches. Get accurate deductions instantly, streamlining
-              your payroll tax management. Focus on business growth with
-              confidence. Try it today!
+              Our Employer Payroll Tax Calculator eliminates the complexities of
+              business taxes. Say goodbye to manual calculations and tax
+              headaches. Get accurate deductions instantly, streamlining your
+              payroll tax management. Focus on business growth with confidence.
+              Try it today!
             </p>
             <form onSubmit={handleSubmit} className="form-input">
               <label forhtml="states">State:</label>
@@ -150,11 +150,11 @@ export default function Payroll() {
             <h1>Unlock Payroll Ease with a Single Click!</h1>
             <h3>Simplify Payroll Taxes with Confidence</h3>
             <p>
-              Our free Employer Payroll Tax Calculator eliminates the
-              complexities of business taxes. Say goodbye to manual calculations
-              and tax headaches. Get accurate deductions instantly, streamlining
-              your payroll tax management. Focus on business growth with
-              confidence. Try it today!
+              Our Employer Payroll Tax Calculator eliminates the complexities of
+              business taxes. Say goodbye to manual calculations and tax
+              headaches. Get accurate deductions instantly, streamlining your
+              payroll tax management. Focus on business growth with confidence.
+              Try it today!
             </p>
             <form onSubmit={handleSubmit} className="form-input">
               <label forhtml="states">State:</label>

@@ -1,7 +1,10 @@
-.Noresults img {
-    width: 80%;
+.Noresults .main-noresults {
+    width: 60%;
 }
 
+.Noresults .check {
+    width: 5%;
+}
 .Noresults h3 {
     margin: 15px 20px;
     padding: 10px;
