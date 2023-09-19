@@ -51,7 +51,7 @@ export default function Payroll() {
                 <div className="col-6 text-start">
                   <label forhtml="states">State:</label>
                 </div>
-                <div className="col-6 text-end">
+                <div className="col-6 d-flex flex-column justify-content-center align-items-end">
                   <button
                     data-tooltip-id="my-tooltip"
                     data-tooltip-content="What state does your employee work in?"
@@ -119,7 +119,21 @@ export default function Payroll() {
                 <option value="wisconsin">Wisconsin</option>
                 <option value="wyoming">Wyoming</option>
               </select>
-              <label forhtml="wage">Annual Wage:</label>
+              <div className="row">
+                <div className="col-6 text-start">
+                  <label forhtml="wage">Annual Wage:</label>
+                </div>
+                <div className="col-6 d-flex flex-column justify-content-center align-items-end">
+                  <button
+                    data-tooltip-id="my-tooltip"
+                    data-tooltip-content="How much does your employee make annually?"
+                  >
+                    ?
+                  </button>
+                  <Tooltip id="my-tooltip" />
+                </div>
+              </div>
+
               <div className="d-flex">
                 <i className="fa-solid fa-dollar-sign"></i>
                 <input
@@ -130,7 +144,21 @@ export default function Payroll() {
                   id="wage"
                 ></input>
               </div>
-              <label forhtml="sui">SUI Rate:</label>
+              <div className="row">
+                <div className="col-6 text-start">
+                  <label forhtml="sui">SUI Rate:</label>
+                </div>
+                <div className="col-6 d-flex flex-column justify-content-center align-items-end">
+                  <button
+                    data-tooltip-id="my-tooltip"
+                    data-tooltip-content="Your state assigns a rate, which depends on factors like your business's age, employee count and more."
+                  >
+                    ?
+                  </button>
+                  <Tooltip id="my-tooltip" />
+                </div>
+              </div>
+
               <div className="d-flex">
                 <input
                   value={suiRate}
@@ -171,7 +199,20 @@ export default function Payroll() {
               Try it today!
             </p>
             <form onSubmit={handleSubmit} className="form-input">
-              <label forhtml="states">State:</label>
+              <div className="row">
+                <div className="col-6 text-start">
+                  <label forhtml="states">State:</label>
+                </div>
+                <div className="col-6 d-flex flex-column justify-content-center align-items-end">
+                  <button
+                    data-tooltip-id="my-tooltip"
+                    data-tooltip-content="What state does your employee work in?"
+                  >
+                    ?
+                  </button>
+                  <Tooltip id="my-tooltip" />
+                </div>
+              </div>
               <select
                 value={state}
                 onChange={handleChangeState}
@@ -230,7 +271,20 @@ export default function Payroll() {
                 <option value="wisconsin">Wisconsin</option>
                 <option value="wyoming">Wyoming</option>
               </select>
-              <label forhtml="wage">Annual Wage:</label>
+              <div className="row">
+                <div className="col-6 text-start">
+                  <label forhtml="wage">Annual Wage:</label>
+                </div>
+                <div className="col-6 d-flex flex-column justify-content-center align-items-end">
+                  <button
+                    data-tooltip-id="my-tooltip"
+                    data-tooltip-content="How much does your employee make annually?"
+                  >
+                    ?
+                  </button>
+                  <Tooltip id="my-tooltip" />
+                </div>
+              </div>
               <div className="d-flex">
                 <i className="fa-solid fa-dollar-sign"></i>
                 <input
@@ -241,7 +295,20 @@ export default function Payroll() {
                   id="wage"
                 ></input>
               </div>
-              <label forhtml="sui">SUI Rate:</label>
+              <div className="row">
+                <div className="col-6 text-start">
+                  <label forhtml="sui">SUI Rate:</label>
+                </div>
+                <div className="col-6 d-flex flex-column justify-content-center align-items-end">
+                  <button
+                    data-tooltip-id="my-tooltip"
+                    data-tooltip-content="Your state assigns a rate, which depends on factors like your business's age, employee count and more."
+                  >
+                    ?
+                  </button>
+                  <Tooltip id="my-tooltip" />
+                </div>
+              </div>
               <div className="d-flex">
                 <input
                   value={suiRate}
