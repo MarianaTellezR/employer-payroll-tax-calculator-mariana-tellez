@@ -21,7 +21,7 @@ export default function SocialMedicareFUTA(props) {
       </div>
       <div className="row">
         <div className="col-7">
-          <p className="tag-name">FUTA: </p>
+          <p className="tag-name">Federal Unemployment Tax (FUTA): </p>
         </div>
         <div className="col-5">
           <p className="data-results">{props.futaa}</p>
