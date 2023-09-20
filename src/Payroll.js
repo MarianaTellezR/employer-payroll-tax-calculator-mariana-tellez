@@ -40,11 +40,10 @@ export default function Payroll() {
             <h1>Unlock Payroll Ease with a Single Click!</h1>
             <h3>Simplify Payroll Taxes with Confidence</h3>
             <p>
-              Our Employer Payroll Tax Calculator eliminates the complexities of
-              business taxes. Say goodbye to manual calculations and tax
-              headaches. Get accurate deductions instantly, streamlining your
-              payroll tax management. Focus on business growth with confidence.
-              Try it today!
+              Experience the convenience of this user-friendly tool that offers
+              estimations for your tax deductions and withholdings, guaranteeing
+              precise and effortless payroll management. Don't hesitate to give
+              it a try today!
             </p>
             <form onSubmit={handleSubmit} className="form-input">
               <div className="row">
@@ -195,11 +194,10 @@ export default function Payroll() {
             <h1>Unlock Payroll Ease with a Single Click!</h1>
             <h3>Simplify Payroll Taxes with Confidence</h3>
             <p>
-              Our Employer Payroll Tax Calculator eliminates the complexities of
-              business taxes. Say goodbye to manual calculations and tax
-              headaches. Get accurate deductions instantly, streamlining your
-              payroll tax management. Focus on business growth with confidence.
-              Try it today!
+              Experience the convenience of this user-friendly tool that offers
+              estimations for your tax deductions and withholdings, guaranteeing
+              precise and effortless payroll management. Don't hesitate to give
+              it a try today!
             </p>
             <form onSubmit={handleSubmit} className="form-input">
               <div className="row">

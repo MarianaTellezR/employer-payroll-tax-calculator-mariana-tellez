@@ -9,48 +9,39 @@ export default function Noresults() {
         alt="Payroll Tax Calculator by Mariana Tellez Resendiz"
         src={require("./payroll-tax.png")}
       />
-      <h3>Why should you use a payroll calculator?</h3>
+      <h3>Employer Payroll Tax Estimation Tool</h3>
+      <p>
+        Our Employer Payroll Tax Calculator eliminates the complexities of
+        business taxes. Say goodbye to manual calculations and tax headaches.
+        Get accurate deductions instantly, streamlining your payroll tax
+        management. Focus on business growth with confidence.
+      </p>
 
-      <div className="d-flex flex-column flex-sm-column flex-md-row  justify-content-center align-items-center">
-        <img
-          className="check"
-          alt="Using Payroll Tax Calculator"
-          src={require("./check.png")}
-        />
-        <p>Estimate hiring costs</p>
-      </div>
-      <div className="d-flex flex-column flex-sm-column flex-md-row  justify-content-center align-items-center">
-        <img
-          className="check"
-          alt="Using Payroll Tax Calculator"
-          src={require("./check.png")}
-        />
-        <p>Take the guesswork out of payroll</p>
-      </div>
-      <div className="d-flex flex-column flex-sm-column flex-md-row  justify-content-center align-items-center">
-        <img
-          className="check"
-          alt="Using Payroll Tax Calculator"
-          src={require("./check.png")}
-        />
-        <p>Avoid significant penalties</p>
-      </div>
-      <div className="d-flex flex-column flex-sm-column flex-md-row  justify-content-center align-items-center">
-        <img
-          className="check"
-          alt="Using Payroll Tax Calculator"
-          src={require("./check.png")}
-        />
-        <p>Pay employees accurately and on time</p>
-      </div>
-      <div className="d-flex flex-column flex-sm-column flex-md-row  justify-content-center align-items-center">
-        <img
-          className="check"
-          alt="Using Payroll Tax Calculator"
-          src={require("./check.png")}
-        />
-        <p>Invest more time into running your business</p>
-      </div>
+      <ul>
+        <li>
+          <i class="fa-solid fa-circle-check"></i>  Estimate hiring costs.
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i>  Take the guesswork out of
+          payroll.
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i>  Avoid significant financial
+          penalties.
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i>  Pay employees accurately and
+          on time.
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i>  Enhance temporary or
+          seasonal employee payroll management.
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i>  Invest more time into running
+          your business.
+        </li>
+      </ul>
     </div>
   );
 }

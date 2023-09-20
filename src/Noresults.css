@@ -2,9 +2,6 @@
     width: 60%;
 }
 
-.Noresults .check {
-    width: 5%;
-}
 .Noresults h3 {
     margin: 15px 20px;
     padding: 10px;
@@ -14,4 +11,12 @@
 .Noresults p {
     color: white;
     margin: 14px 25px;
+}
+.Noresults ul {
+    list-style: none;
+    text-align: justify;
+    color: white;
+}
+.Noresults i {
+    color: white;
 }
