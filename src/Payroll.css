@@ -28,16 +28,17 @@
 
 .Payroll .more-info {
   background-color: white;
-  color: #5f71d3;
+  color: #303c7e;
   border-radius: 30px;
-  border: 1px solid #5f71d3;
+  border: 2px solid #303c7e;
   transition: all 125ms ease-in-out;
   margin-right: 0px;
-  padding: 2px 8px;
+  padding: 0px 8px;
+  font-weight: 500;
 }
 
 .Payroll .more-info:hover {
-  background-color: #5f71d3;
+  background-color: #303c7e;
   color: white;
 }
 
