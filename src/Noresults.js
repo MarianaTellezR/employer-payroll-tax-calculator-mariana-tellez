@@ -19,26 +19,26 @@ export default function Noresults() {
 
       <ul>
         <li>
-          <i class="fa-solid fa-circle-check"></i>  Estimate hiring costs.
+          <i className="fa-solid fa-circle-check"></i>  Estimate hiring costs.
         </li>
         <li>
-          <i class="fa-solid fa-circle-check"></i>  Take the guesswork out of
+          <i className="fa-solid fa-circle-check"></i>  Take the guesswork out of
           payroll.
         </li>
         <li>
-          <i class="fa-solid fa-circle-check"></i>  Avoid significant financial
+          <i className="fa-solid fa-circle-check"></i>  Avoid significant financial
           penalties.
         </li>
         <li>
-          <i class="fa-solid fa-circle-check"></i>  Pay employees accurately and
+          <i className="fa-solid fa-circle-check"></i>  Pay employees accurately and
           on time.
         </li>
         <li>
-          <i class="fa-solid fa-circle-check"></i>  Enhance temporary or
+          <i className="fa-solid fa-circle-check"></i>  Enhance temporary or
           seasonal employee payroll management.
         </li>
         <li>
-          <i class="fa-solid fa-circle-check"></i>  Invest more time into running
+          <i className="fa-solid fa-circle-check"></i>  Invest more time into running
           your business.
         </li>
       </ul>

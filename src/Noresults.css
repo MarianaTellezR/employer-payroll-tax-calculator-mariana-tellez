@@ -14,8 +14,11 @@
 }
 .Noresults ul {
     list-style: none;
-    text-align: justify;
+    text-align: center;
     color: white;
+}
+.Noresults li {
+    line-height: 1.8;
 }
 .Noresults i {
     color: white;
