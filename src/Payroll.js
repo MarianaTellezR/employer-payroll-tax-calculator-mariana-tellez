@@ -179,7 +179,7 @@ export default function Payroll() {
             </form>
           </div>
           <div className="col-sm-12 col-md-6 payroll-right">
-            <h3>As an employer you are responsible for the following taxes:</h3>
+            <h3 className="results-h3">As an employer you are responsible for the following taxes:</h3>
             <ResultsImage />
             <Results state={state} wage={annualWage} sui={suiRate} />
           </div>

@@ -26,6 +26,12 @@
   margin-top: 0px;
 }
 
+.Payroll .results-h3 {
+  margin: 20px;
+  padding: 10px;
+  line-height: 1.8;
+}
+
 .Payroll .more-info {
   background-color: #9896f1;
   color: white;
