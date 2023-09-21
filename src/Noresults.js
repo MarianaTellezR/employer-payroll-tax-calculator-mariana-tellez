@@ -11,35 +11,29 @@ export default function Noresults() {
       />
       <h3>Employer Payroll Tax Estimation Tool</h3>
       <p>
-        Our Employer Payroll Tax Calculator eliminates the complexities of
-        business taxes. Say goodbye to manual calculations and tax headaches.
-        Get accurate deductions instantly, streamlining your payroll tax
-        management. Focus on business growth with confidence.
+        As an employer, you must pay various taxes, including federal and state
+        unemployment taxes regulated by the Federal Unemployment Tax Act (FUTA),
+        along with different state unemployment insurance (SUI) programs.
+        Understanding and managing these taxes is crucial for your small
+        business success.
       </p>
 
       <ul>
         <li>
-          <i className="fa-solid fa-circle-check"></i>  Estimate hiring costs.
+          <i className="fa-solid fa-circle-check"></i>{" "}
+          <strong>Estimate hiring costs.</strong>{" "}
+          Plan for recruitment expenses to understand the cost of expanding your
+          workforce.
         </li>
         <li>
-          <i className="fa-solid fa-circle-check"></i>  Take the guesswork out of
-          payroll.
+          <i className="fa-solid fa-circle-check"></i>{" "}
+          <strong>Streamline Payroll.</strong>{" "}
+          Adopt a precise payroll system to ensure accurate and timely payments.
         </li>
         <li>
-          <i className="fa-solid fa-circle-check"></i>  Avoid significant financial
-          penalties.
-        </li>
-        <li>
-          <i className="fa-solid fa-circle-check"></i>  Pay employees accurately and
-          on time.
-        </li>
-        <li>
-          <i className="fa-solid fa-circle-check"></i>  Enhance temporary or
-          seasonal employee payroll management.
-        </li>
-        <li>
-          <i className="fa-solid fa-circle-check"></i>  Invest more time into running
-          your business.
+          <i className="fa-solid fa-circle-check"></i>{" "}
+          <strong>Pay On Time and Accurately.</strong>{" "}
+          Build trust by paying employees accurately and promptly.
         </li>
       </ul>
     </div>

@@ -1,25 +1,33 @@
 .Noresults .main-noresults {
-    width: 60%;
+  width: 60%;
 }
 
 .Noresults h3 {
-    margin: 15px 20px;
-    padding: 10px;
-    color: white;
+  margin: 15px 20px;
+  padding: 10px;
+  color: white;
 }
 
 .Noresults p {
-    color: white;
-    margin: 14px 25px;
+  color: white;
+  margin: 14px 25px;
 }
 .Noresults ul {
-    list-style: none;
-    text-align: center;
-    color: white;
+  list-style: none;
+  text-align: justify;
+  color: white;
+  padding-left: 0px;
+  margin: 10px 25px;
+  padding: 5px;
 }
 .Noresults li {
-    line-height: 1.8;
+  line-height: 1.8;
+  background-color: #9bb1ff;
+  margin: 15px 10px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-size: 15px;
 }
 .Noresults i {
-    color: white;
+  color: rgb(235, 242, 252);
 }
