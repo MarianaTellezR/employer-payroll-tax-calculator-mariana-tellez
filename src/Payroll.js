@@ -175,11 +175,14 @@ export default function Payroll() {
                 type="submit"
                 value="Calculate"
                 className="btn-calculate"
+                title="Calculate your Employer Payroll Taxes"
               />
             </form>
           </div>
           <div className="col-sm-12 col-md-6 payroll-right">
-            <h3 className="results-h3">As an employer you are responsible for the following taxes:</h3>
+            <h3 className="results-h3">
+              As an employer you are responsible for the following taxes:
+            </h3>
             <ResultsImage />
             <Results state={state} wage={annualWage} sui={suiRate} />
           </div>
@@ -327,6 +330,7 @@ export default function Payroll() {
                 type="submit"
                 value="Calculate"
                 className="btn-calculate"
+                title="Calculate your Employer Payroll Taxes"
               />
             </form>
           </div>
