@@ -6,7 +6,7 @@ import ResultsImage from "./ResultsImage";
 import { Tooltip } from "react-tooltip";
 
 export default function Payroll() {
-  const [state, setState] = useState("alaska");
+  const [state, setState] = useState("alabama");
   const [annualWage, setAnnualWage] = useState(100000);
   const [suiRate, setSuiRate] = useState(15);
 
