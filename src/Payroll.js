@@ -32,6 +32,142 @@ export default function Payroll() {
     setCalculate(false);
   }
 
+  let form = (
+    <form onSubmit={handleSubmit} className="form-input">
+      <div className="row">
+        <div className="col-6 d-flex flex-column justify-content-center align-items-start">
+          <label forhtml="states">State:</label>
+        </div>
+        <div className="col-6 d-flex flex-column justify-content-center align-items-end">
+          <p
+            data-tooltip-id="my-tooltip"
+            data-tooltip-content="What state does your employee work in?"
+            className="more-info"
+          >
+            ?
+          </p>
+          <Tooltip id="my-tooltip" />
+        </div>
+      </div>
+      <select
+        value={state}
+        onChange={handleChangeState}
+        name="states"
+        id="states"
+      >
+        <option value="alabama">Alabama</option>
+        <option value="alaska">Alaska</option>
+        <option value="arizona">Arizona</option>
+        <option value="arkansas">Arkansas</option>
+        <option value="california">California</option>
+        <option value="colorado">Colorado</option>
+        <option value="connecticut">Connecticut</option>
+        <option value="delaware">Delaware</option>
+        <option value="columbia">District of Columbia</option>
+        <option value="florida">Florida</option>
+        <option value="georgia">Georgia</option>
+        <option value="hawaii">Hawaii</option>
+        <option value="idaho">Idaho</option>
+        <option value="illinois">Illinois</option>
+        <option value="indiana">Indiana</option>
+        <option value="iowa">Iowa</option>
+        <option value="kansas">Kansas</option>
+        <option value="kentucky">Kentucky</option>
+        <option value="louisiana">Louisiana</option>
+        <option value="maine">Maine</option>
+        <option value="maryland">Maryland</option>
+        <option value="massachusetts">Massachusetts</option>
+        <option value="michigan">Michigan</option>
+        <option value="minnesota">Minnesota</option>
+        <option value="mississippi">Mississippi</option>
+        <option value="missouri">Missouri</option>
+        <option value="montana">Montana</option>
+        <option value="nebraska">Nebraska</option>
+        <option value="nevada">Nevada</option>
+        <option value="newhampshire">New Hampshire</option>
+        <option value="newjersey">New Jersey</option>
+        <option value="newmexico">New Mexico</option>
+        <option value="newyork">New York</option>
+        <option value="northcarolina">North Carolina</option>
+        <option value="northdakota">North Dakota</option>
+        <option value="ohio">Ohio</option>
+        <option value="oklahoma">Oklahoma</option>
+        <option value="oregon">Oregon</option>
+        <option value="pennsylvania">Pennsylvania</option>
+        <option value="rhodeisland">Rhode Island</option>
+        <option value="southcarolina">South Carolina</option>
+        <option value="southdakota">South Dakota</option>
+        <option value="tennessee">Tenessee</option>
+        <option value="texas">Texas</option>
+        <option value="utah">Utah</option>
+        <option value="vermont">Vermont</option>
+        <option value="virginia">Virginia</option>
+        <option value="washington">Washington</option>
+        <option value="westvirginia">West Virginia</option>
+        <option value="wisconsin">Wisconsin</option>
+        <option value="wyoming">Wyoming</option>
+      </select>
+      <div className="row">
+        <div className="col-6 d-flex flex-column justify-content-center align-items-start">
+          <label forhtml="wage">Annual Wage:</label>
+        </div>
+        <div className="col-6 d-flex flex-column justify-content-center align-items-end">
+          <p
+            data-tooltip-id="my-tooltip"
+            data-tooltip-content="How much does your employee make annually?"
+            className="more-info"
+          >
+            ?
+          </p>
+          <Tooltip id="my-tooltip" />
+        </div>
+      </div>
+
+      <div className="d-flex">
+        <i className="fa-solid fa-dollar-sign"></i>
+        <input
+          value={annualWage}
+          type="text"
+          onChange={handleChangeAnnualWage}
+          name="wage"
+          id="wage"
+        ></input>
+      </div>
+      <div className="row">
+        <div className="col-6 d-flex flex-column justify-content-center align-items-start">
+          <label forhtml="sui">SUI Rate:</label>
+        </div>
+        <div className="col-6 d-flex flex-column justify-content-center align-items-end">
+          <p
+            data-tooltip-id="my-tooltip"
+            data-tooltip-content="This rate is assigned to you by your state."
+            className="more-info"
+          >
+            ?
+          </p>
+          <Tooltip id="my-tooltip" />
+        </div>
+      </div>
+
+      <div className="d-flex">
+        <input
+          value={suiRate}
+          type="number"
+          onChange={handleChangeSuiRate}
+          name="sui"
+          id="sui"
+        ></input>
+        <i className="fa-solid fa-percent"></i>
+      </div>
+      <input
+        type="submit"
+        value="Calculate"
+        className="btn-calculate"
+        title="Calculate your Employer Payroll Taxes"
+      />
+    </form>
+  );
+
   if (calculate) {
     return (
       <div className="Payroll">
@@ -45,139 +181,7 @@ export default function Payroll() {
               precise and effortless payroll management. Don't hesitate to give
               it a try today!
             </p>
-            <form onSubmit={handleSubmit} className="form-input">
-              <div className="row">
-                <div className="col-6 d-flex flex-column justify-content-center align-items-start">
-                  <label forhtml="states">State:</label>
-                </div>
-                <div className="col-6 d-flex flex-column justify-content-center align-items-end">
-                  <p
-                    data-tooltip-id="my-tooltip"
-                    data-tooltip-content="What state does your employee work in?"
-                    className="more-info"
-                  >
-                    ?
-                  </p>
-                  <Tooltip id="my-tooltip" />
-                </div>
-              </div>
-              <select
-                value={state}
-                onChange={handleChangeState}
-                name="states"
-                id="states"
-              >
-                <option value="alabama">Alabama</option>
-                <option value="alaska">Alaska</option>
-                <option value="arizona">Arizona</option>
-                <option value="arkansas">Arkansas</option>
-                <option value="california">California</option>
-                <option value="colorado">Colorado</option>
-                <option value="connecticut">Connecticut</option>
-                <option value="delaware">Delaware</option>
-                <option value="columbia">District of Columbia</option>
-                <option value="florida">Florida</option>
-                <option value="georgia">Georgia</option>
-                <option value="hawaii">Hawaii</option>
-                <option value="idaho">Idaho</option>
-                <option value="illinois">Illinois</option>
-                <option value="indiana">Indiana</option>
-                <option value="iowa">Iowa</option>
-                <option value="kansas">Kansas</option>
-                <option value="kentucky">Kentucky</option>
-                <option value="louisiana">Louisiana</option>
-                <option value="maine">Maine</option>
-                <option value="maryland">Maryland</option>
-                <option value="massachusetts">Massachusetts</option>
-                <option value="michigan">Michigan</option>
-                <option value="minnesota">Minnesota</option>
-                <option value="mississippi">Mississippi</option>
-                <option value="missouri">Missouri</option>
-                <option value="montana">Montana</option>
-                <option value="nebraska">Nebraska</option>
-                <option value="nevada">Nevada</option>
-                <option value="newhampshire">New Hampshire</option>
-                <option value="newjersey">New Jersey</option>
-                <option value="newmexico">New Mexico</option>
-                <option value="newyork">New York</option>
-                <option value="northcarolina">North Carolina</option>
-                <option value="northdakota">North Dakota</option>
-                <option value="ohio">Ohio</option>
-                <option value="oklahoma">Oklahoma</option>
-                <option value="oregon">Oregon</option>
-                <option value="pennsylvania">Pennsylvania</option>
-                <option value="rhodeisland">Rhode Island</option>
-                <option value="southcarolina">South Carolina</option>
-                <option value="southdakota">South Dakota</option>
-                <option value="tennessee">Tenessee</option>
-                <option value="texas">Texas</option>
-                <option value="utah">Utah</option>
-                <option value="vermont">Vermont</option>
-                <option value="virginia">Virginia</option>
-                <option value="washington">Washington</option>
-                <option value="westvirginia">West Virginia</option>
-                <option value="wisconsin">Wisconsin</option>
-                <option value="wyoming">Wyoming</option>
-              </select>
-              <div className="row">
-                <div className="col-6 d-flex flex-column justify-content-center align-items-start">
-                  <label forhtml="wage">Annual Wage:</label>
-                </div>
-                <div className="col-6 d-flex flex-column justify-content-center align-items-end">
-                  <p
-                    data-tooltip-id="my-tooltip"
-                    data-tooltip-content="How much does your employee make annually?"
-                    className="more-info"
-                  >
-                    ?
-                  </p>
-                  <Tooltip id="my-tooltip" />
-                </div>
-              </div>
-
-              <div className="d-flex">
-                <i className="fa-solid fa-dollar-sign"></i>
-                <input
-                  value={annualWage}
-                  type="text"
-                  onChange={handleChangeAnnualWage}
-                  name="wage"
-                  id="wage"
-                ></input>
-              </div>
-              <div className="row">
-                <div className="col-6 d-flex flex-column justify-content-center align-items-start">
-                  <label forhtml="sui">SUI Rate:</label>
-                </div>
-                <div className="col-6 d-flex flex-column justify-content-center align-items-end">
-                  <p
-                    data-tooltip-id="my-tooltip"
-                    data-tooltip-content="This rate is assigned to you by your state."
-                    className="more-info"
-                  >
-                    ?
-                  </p>
-                  <Tooltip id="my-tooltip" />
-                </div>
-              </div>
-
-              <div className="d-flex">
-                <input
-                  value={suiRate}
-                  type="number"
-                  onChange={handleChangeSuiRate}
-                  name="sui"
-                  id="sui"
-                ></input>
-                <i className="fa-solid fa-percent"></i>
-              </div>
-              <input
-                type="submit"
-                value="Calculate"
-                className="btn-calculate"
-                title="Calculate your Employer Payroll Taxes"
-              />
-            </form>
+            {form}
           </div>
           <div className="col-sm-12 col-md-6 payroll-right">
             <h3 className="results-h3">
@@ -202,137 +206,7 @@ export default function Payroll() {
               precise and effortless payroll management. Don't hesitate to give
               it a try today!
             </p>
-            <form onSubmit={handleSubmit} className="form-input">
-              <div className="row">
-                <div className="col-6 d-flex flex-column justify-content-center align-items-start">
-                  <label forhtml="states">State:</label>
-                </div>
-                <div className="col-6 d-flex flex-column justify-content-center align-items-end">
-                  <p
-                    data-tooltip-id="my-tooltip"
-                    data-tooltip-content="What state does your employee work in?"
-                    className="more-info"
-                  >
-                    ?
-                  </p>
-                  <Tooltip id="my-tooltip" />
-                </div>
-              </div>
-              <select
-                value={state}
-                onChange={handleChangeState}
-                name="states"
-                id="states"
-              >
-                <option value="alabama">Alabama</option>
-                <option value="alaska">Alaska</option>
-                <option value="arizona">Arizona</option>
-                <option value="arkansas">Arkansas</option>
-                <option value="california">California</option>
-                <option value="colorado">Colorado</option>
-                <option value="connecticut">Connecticut</option>
-                <option value="delaware">Delaware</option>
-                <option value="columbia">District of Columbia</option>
-                <option value="florida">Florida</option>
-                <option value="georgia">Georgia</option>
-                <option value="hawaii">Hawaii</option>
-                <option value="idaho">Idaho</option>
-                <option value="illinois">Illinois</option>
-                <option value="indiana">Indiana</option>
-                <option value="iowa">Iowa</option>
-                <option value="kansas">Kansas</option>
-                <option value="kentucky">Kentucky</option>
-                <option value="louisiana">Louisiana</option>
-                <option value="maine">Maine</option>
-                <option value="maryland">Maryland</option>
-                <option value="massachusetts">Massachusetts</option>
-                <option value="michigan">Michigan</option>
-                <option value="minnesota">Minnesota</option>
-                <option value="mississippi">Mississippi</option>
-                <option value="missouri">Missouri</option>
-                <option value="montana">Montana</option>
-                <option value="nebraska">Nebraska</option>
-                <option value="nevada">Nevada</option>
-                <option value="newhampshire">New Hampshire</option>
-                <option value="newjersey">New Jersey</option>
-                <option value="newmexico">New Mexico</option>
-                <option value="newyork">New York</option>
-                <option value="northcarolina">North Carolina</option>
-                <option value="northdakota">North Dakota</option>
-                <option value="ohio">Ohio</option>
-                <option value="oklahoma">Oklahoma</option>
-                <option value="oregon">Oregon</option>
-                <option value="pennsylvania">Pennsylvania</option>
-                <option value="rhodeisland">Rhode Island</option>
-                <option value="southcarolina">South Carolina</option>
-                <option value="southdakota">South Dakota</option>
-                <option value="tennessee">Tenessee</option>
-                <option value="texas">Texas</option>
-                <option value="utah">Utah</option>
-                <option value="vermont">Vermont</option>
-                <option value="virginia">Virginia</option>
-                <option value="washington">Washington</option>
-                <option value="westvirginia">West Virginia</option>
-                <option value="wisconsin">Wisconsin</option>
-                <option value="wyoming">Wyoming</option>
-              </select>
-              <div className="row">
-                <div className="col-6 d-flex flex-column justify-content-center align-items-start">
-                  <label forhtml="wage">Annual Wage:</label>
-                </div>
-                <div className="col-6 d-flex flex-column justify-content-center align-items-end">
-                  <p
-                    data-tooltip-id="my-tooltip"
-                    data-tooltip-content="How much does your employee make annually?"
-                    className="more-info"
-                  >
-                    ?
-                  </p>
-                  <Tooltip id="my-tooltip" />
-                </div>
-              </div>
-              <div className="d-flex">
-                <i className="fa-solid fa-dollar-sign"></i>
-                <input
-                  value={annualWage}
-                  type="text"
-                  onChange={handleChangeAnnualWage}
-                  name="wage"
-                  id="wage"
-                ></input>
-              </div>
-              <div className="row">
-                <div className="col-6 d-flex flex-column justify-content-center align-items-start">
-                  <label forhtml="sui">SUI Rate:</label>
-                </div>
-                <div className="col-6 d-flex flex-column justify-content-center align-items-end">
-                  <p
-                    data-tooltip-id="my-tooltip"
-                    data-tooltip-content="This rate is assigned to you by your state."
-                    className="more-info"
-                  >
-                    ?
-                  </p>
-                  <Tooltip id="my-tooltip" />
-                </div>
-              </div>
-              <div className="d-flex">
-                <input
-                  value={suiRate}
-                  type="number"
-                  onChange={handleChangeSuiRate}
-                  name="sui"
-                  id="sui"
-                ></input>
-                <i className="fa-solid fa-percent"></i>
-              </div>
-              <input
-                type="submit"
-                value="Calculate"
-                className="btn-calculate"
-                title="Calculate your Employer Payroll Taxes"
-              />
-            </form>
+            {form}
           </div>
           <div className="col-sm-12 col-md-6 payroll-right">
             <Noresults />
