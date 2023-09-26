@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Payroll.css";
 import Results from "./Results";
+import PayrollDescription from "./PayrollDescription";
 import Noresults from "./Noresults";
 import ResultsImage from "./ResultsImage";
 import { Tooltip } from "react-tooltip";
@@ -173,14 +174,7 @@ export default function Payroll() {
       <div className="Payroll">
         <div className="row">
           <div className="col-sm-12 col-md-6 payroll-left">
-            <h1>Unlock Payroll Ease with a Single Click!</h1>
-            <h3>Simplify Payroll Taxes with Confidence</h3>
-            <p>
-              Experience the convenience of this user-friendly tool that offers
-              estimations for your tax deductions and withholdings, guaranteeing
-              precise and effortless payroll management. Don't hesitate to give
-              it a try today!
-            </p>
+            <PayrollDescription />
             {form}
           </div>
           <div className="col-sm-12 col-md-6 payroll-right">
@@ -198,14 +192,7 @@ export default function Payroll() {
       <div className="Payroll">
         <div className="row">
           <div className="col-sm-12 col-md-6 payroll-left">
-            <h1>Unlock Payroll Ease with a Single Click!</h1>
-            <h3>Simplify Payroll Taxes with Confidence</h3>
-            <p>
-              Experience the convenience of this user-friendly tool that offers
-              estimations for your tax deductions and withholdings, guaranteeing
-              precise and effortless payroll management. Don't hesitate to give
-              it a try today!
-            </p>
+            <PayrollDescription />
             {form}
           </div>
           <div className="col-sm-12 col-md-6 payroll-right">

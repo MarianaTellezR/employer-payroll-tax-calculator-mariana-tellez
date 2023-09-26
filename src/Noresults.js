@@ -14,8 +14,6 @@ export default function Noresults() {
         As an employer, you must pay various taxes, including federal and state
         unemployment taxes regulated by the Federal Unemployment Tax Act (FUTA),
         along with different state unemployment insurance (SUI) programs.
-        Understanding and managing these taxes is crucial for your small
-        business success.
       </p>
 
       <ul>
